@@ -97,8 +97,8 @@ header {
 }
 
 /* Cart hover effect */
-.cart:hover {
-    opacity: 0.8; /* Reduce opacity on hover */
+.cart a:hover {
+    color: #ffc107; /* Change text color on hover */
 }
 
 /* Search button hover effect */
