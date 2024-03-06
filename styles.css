@@ -143,7 +143,7 @@ footer {
 
 .background-images {
     position: relative; /* Add position relative to allow absolute positioning of text */
-    background-image: url("background_pic.jpg");
+    background-image: url("images/background_pic.jpg");
     background-size: cover;
     background-position: center;
     height: 80vh; 
