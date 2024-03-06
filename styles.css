@@ -26,6 +26,16 @@ header {
     align-items: center;
 }
 
+/* Logo styles */
+.logo {
+    margin-right: 10px; /* Add margin to create space between logo and other elements */
+}
+
+.logo img {
+     width: 75px; /* Adjust the width of the logo */
+}
+  
+
 .search-bar {
     /* Ensure the search bar is aligned to the left */
     display: flex;
