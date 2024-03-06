@@ -171,3 +171,62 @@ footer {
 .shop-button a:hover {
     background-color: #4CAF50; 
 }
+
+
+
+.image-section {
+    max-width: 100%;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+  }
+  
+  .image-container {
+    display: flex;
+  }
+  
+  .image-container img {
+    width: 200px; /* Adjust image width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px; /* Add space between images */
+  }
+  
+  /* Style navigation arrows */
+  .prev,
+  .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev {
+    left: 0;
+  }
+  
+  .next {
+    right: 0;
+  }
+  
+
+  /* Text Section styles */
+.text-section {
+    text-align: center; /* Center-align the text */
+    margin-top: 20px; /* Add margin to create space between sections */
+}
+
+.section-heading {
+    font-size: 24px; /* Adjusted font size */
+    color: #328151; /* Match text color with other headings */
+    margin-bottom: 10px; /* Add margin at the bottom of the heading */
+}
