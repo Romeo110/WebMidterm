@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Sustainable Haven</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<style>
+	.product {
+		font-size: 1.2em;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		padding-right: 20px;
+		position: relative;
+		gap: 30px;
+		margin: 0;
+		margin: 0 50px 15px 0;
+		padding: 0;
+	}
+		
+	.pdescription {
+		font-size: 16px;
+		line-height: 1.5;
+		color: #444;
+		margin-bottom: 20px;
+		text-align: justify;
+	}
+
+	.cart-notification {
+		font-size: 16px;
+		line-height: 1.5;
+		color: #444;
+		margin-bottom: 20px;
+		text-align: center;
+	}
+</style>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+			<div class="logo">
+        <a href="index.html">
+          <img src="images/logo.png" alt="Logo">
+        </a>
+      </div>
+      <!-- Search Bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+      </div>
+      <!-- Business Name and Navigation -->
+      <div class="branding">
+        <h1 class="name">Sustainable Haven</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Cart -->
+      <div class="cart">
+        <img src="images/cart.jpeg" alt="Cart">
+      </br>
+        <a href="cart.html">Cart</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Product cards -->
+    <div class="product">
+      <img src="images/bag.jpg" alt="Bag" width=300px height=auto>
+      <h2>Bag</h2>
+      <p class="pdescription"> Description of Bag </p>
+			<p class="pdescription" style="color:gray;"> $39.99 </p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+    <!-- Repeat for other products -->
+    <div class="product">
+      <img src="images/comb.jpg" alt="Comb" width=300px height=auto>
+      <h2>Comb</h2>
+      <p class="pdescription"> Description of Comb </p>
+			<p class="pdescription" style="color:gray;"> $29.99 </p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+		<div class="product">
+      <img src="images/detergentSheets.jpg" alt="Detergent Sheets" width=300px height=auto>
+      <h2>Detergent Sheets</h2>
+      <p class="pdescription"> Description of Detergent Sheets </p>
+			<p class="pdescription" style="color:gray;"> $19.99 </p>
+      <button class="add-to-cart">Add to Cart</button>
+    </div>
+  </main>
+
+	<div class="cart-notification"></div>
+	<div class="cart-array"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer">
+      <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- <script src="shopScript.js"></script> -->
+	<script>
+		// Define an array to store product information
+		var products = [
+				{
+						name: "Bag",
+						image: "images/bag.jpg",
+						description: "Description of Bag",
+						quantity: 1,
+						price: 39.99
+				},
+				{
+						name: "Comb",
+						image: "images/comb.jpg",
+						description: "Description of Comb",
+						quantity: 1,
+						price: 29.99
+				},
+				// Add more products as needed
+				{
+						name: "Detergent Sheets",
+						image: "images/detergentSheets.jpg",
+						description: "Description of Detergent Sheets",
+						quantity: 1,
+						price: 19.99
+				},
+		];
+
+		// Initialize the cart from localStorage or create an empty array if it doesn't exist
+		// var cart = JSON.parse(localStorage.getItem('cart')) || []; ////////////////////////////////////////////
+		var cart = [];
+
+		$(document).ready(function() {
+				// Add event listener for "Add to Cart" button clicks on the container element
+				$(".container").on("click", ".add-to-cart", function() {
+						// Get the index of the product in the DOM
+						var index = $(this).closest(".product").index();
+						// Get the product information from the products array
+						var product = products[index];
+						// Add the product to the cart
+						addToCart(product);
+						// Change the button text to "Added to cart"
+						$(this).text("Added to cart");
+						// Disable the button to prevent further clicks
+						$(this).prop("disabled", true);
+						// Show a fade effect for the cart notification of this specific product
+						$(".cart-notification").text("Added to cart: " + product.name).fadeIn().delay(1000).fadeOut();
+				});
+		});
+
+		// Function to add a product to the cart (this is just an example, you would need to implement your own cart logic)
+		function addToCart(product) {
+				// Implement your cart logic here
+				cart.push(product);
+				// Save the updated cart to localStorage
+				localStorage.setItem('cart', JSON.stringify(cart));
+				// $(".cart-array").text(cart.length);
+		}
+	</script>
+</body>
+</html>
