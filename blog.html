@@ -5,73 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog - Sustainable Haven - Eco-Friendly Products</title>
   <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
+    /* Reset styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+    }
+
+    /* Header styles */
+    header {
+        background-color: #fff;
+        color: #328151;
+        padding: 20px 0;
     }
 
     .container {
-      max-width: 1200px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+        max-width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
+    /* Logo styles */
     .logo img {
-      height: 50px;
+         width: 75px; /* Adjust the width of the logo */
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+        width: 21%;
+    }
+
+    .search-bar input[type="text"], .search-bar button {
+        padding: 12px;
+        border-radius: 5px;
     }
 
     .search-bar input[type="text"] {
-      padding: 10px;
+        width: 70%;
+        border: 1px solid #ccc;
     }
 
     .search-bar button {
-      padding: 10px;
-      cursor: pointer;
+        width: 30%;
+        background-color: #328151;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
     }
 
-    .branding h1 {
-      margin: 0;
+    .branding .name, .nav-links li a, .cart a {
+        color: #328151;
     }
 
-    .nav-links {
-      list-style: none;
-      padding: 0;
+    /* Footer styles */
+    footer {
+        background-color: #c7ceca;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        left: 0;
     }
 
-    .nav-links li {
-      display: inline;
-      margin-right: 20px;
+    /* Blog Section Styles */
+    .blog-posts {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
     }
 
-    .nav-links li a {
-      text-decoration: none;
-      color: #000;
+    .blog-post {
+        width: calc(25% - 20px);
+        background-color: #fff;
+        margin-bottom: 20px;
+        padding: 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
 
-    .cart img {
-      width: 24px;
+    .blog-post h2 {
+        font-size: 20px;
+        color: #328151;
+        margin-bottom: 10px;
     }
 
-    .blog-container {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      padding: 20px;
+    .blog-post p {
+        line-height: 1.5;
     }
 
-    .blog-entry {
-      background-color: #f4f4f4;
-      padding: 20px;
-      border-radius: 5px;
+    @media (max-width: 768px) {
+        .blog-post {
+            width: calc(50% - 20px);
+        }
     }
 
-    .footer {
-      text-align: center;
-      padding: 20px 0;
-      background-color: #f4f4f4;
+    @media (max-width: 480px) {
+        .blog-post {
+            width: 100%;
+        }
     }
   </style>
 </head>
@@ -80,60 +123,56 @@
   <header>
     <div class="container">
       <div class="logo">
-        <a href="index.html">
-          <img src="logo.png" alt="Logo">
-        </a>
+        <a href="index.html"><img src="logo.png" alt="Logo"></a>
       </div>
       <div class="search-bar">
         <input type="text" placeholder="Search...">
         <button type="submit">Search</button>
       </div>
-      <div class="branding">
-        <h1 class="name">Sustainable Haven</h1>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Shop</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">Product</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
       <div class="cart">
-        <img src="cart.jpeg" alt="Cart">
-        <a href="cart.html">Cart</a>
+        <a href="cart.html"><img src="cart.jpeg" alt="Cart">Cart</a>
       </div>
     </div>
   </header>
 
   <main>
-    <section class="blog-container">
-      <article class="blog-entry">
+    <div class="blog-posts">
+      <div class="blog-post">
         <h2>Eco-Friendly Packaging Alternatives</h2>
-        <p>Discover how switching to eco-friendly packaging can reduce environmental impact.</p>
-      </article>
-      <article class="blog-entry">
+        <p>Explore the benefits and innovations in eco-friendly packaging, highlighting its importance in reducing environmental impact and enhancing sustainability in our daily lives. Learn about the materials and processes involved in creating packaging solutions that are not only efficient but also beneficial to the ecosystem.</p>
+      </div>
+      <div class="blog-post">
         <h2>Sustainable Fashion: A New Trend</h2>
-        <p>Learn about the rise of sustainable fashion and how it's changing the industry.</p>
-      </article>
-      <article class="blog-entry">
+        <p>Delve into the world of sustainable fashion, where ethics meet aesthetics. This blog discusses how the fashion industry is shifting towards more sustainable practices, the role of consumers in this change, and the impact of sustainable fashion on the environment. Discover brands that are leading the way and how you can contribute to a greener wardrobe.</p>
+      </div>
+      <div class="blog-post">
         <h2>Green Building Materials</h2>
-        <p>Explore innovative building materials that are both sustainable and durable.</p>
-      </article>
-      <article class="blog-entry">
+        <p>Discover the latest in green building materials that are transforming the construction industry. Learn about the benefits of using sustainable materials, their impact on reducing the carbon footprint, and how they contribute to creating healthier living spaces. From bamboo flooring to recycled steel, explore the materials making buildings greener.</p>
+      </div>
+      <div class="blog-post">
         <h2>Zero-Waste Lifestyle Tips</h2>
-        <p>Get practical advice on how to minimize waste and live a more sustainable life.</p>
-      </article>
-    </section>
+        <p>Embark on a journey towards a zero-waste lifestyle with practical tips and tricks. This blog provides insights into reducing waste in your daily life, from grocery shopping to household management. Learn how simple changes can make a significant difference in minimizing your environmental impact and contributing to a sustainable future.</p>
+      </div>
+    </div>
   </main>
 
   <footer>
-    <div class="footer">
-      <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
-    </div>
+    <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
   </footer>
+
+</body>
+</html>
+
 
 </body>
 </html>
