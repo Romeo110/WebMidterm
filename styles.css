@@ -129,3 +129,10 @@ footer {
         flex-basis: 100%; /* Full width on smaller screens */
     }
 }
+
+.background-images {
+    background-image: url("background_pic.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Set the height to cover the entire viewport */
+}
