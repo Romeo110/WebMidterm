@@ -272,22 +272,6 @@ footer {
     text-align: justify;
 }
 
-/* Adding a "Read More" button */
-.blog-post a.read-more {
-    background-color: #328151;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    display: block;
-    text-align: center;
-    margin-top: 20px;
-    transition: background-color 0.3s ease;
-}
-
-.blog-post a.read-more:hover {
-    background-color: #256f47;
-}
-
 /* Hover effect for the blog post */
 .blog-post:hover {
     transform: translateY(-5px);
