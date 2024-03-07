@@ -306,3 +306,56 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* Reviews Posts Styles */
+.reviews {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #e0f2e9;
+  margin: 40px 0;
+  border-radius: 20px;
+}
+
+.reviews h2 {
+  color: #328151;
+  margin-bottom: 30px;
+}
+
+.review-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.review-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33% - 20px);
+  margin: 0 auto;
+}
+
+.review-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.review-card h3 {
+  margin-top: 20px;
+  color: #328151;
+}
+
+@media (max-width: 768px) {
+  .review-card {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .review-card {
+    width: 100%;
+  }
+}
