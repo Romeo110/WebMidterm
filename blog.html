@@ -4,175 +4,70 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog - Sustainable Haven - Eco-Friendly Products</title>
-  <style>
-    /* Reset styles */
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-    }
-
-    /* Header styles */
-    header {
-        background-color: #fff;
-        color: #328151;
-        padding: 20px 0;
-    }
-
-    .container {
-        max-width: 100%;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    /* Logo styles */
-    .logo img {
-         width: 75px; /* Adjust the width of the logo */
-    }
-
-    .search-bar {
-        display: flex;
-        align-items: center;
-        width: 21%;
-    }
-
-    .search-bar input[type="text"], .search-bar button {
-        padding: 12px;
-        border-radius: 5px;
-    }
-
-    .search-bar input[type="text"] {
-        width: 70%;
-        border: 1px solid #ccc;
-    }
-
-    .search-bar button {
-        width: 30%;
-        background-color: #328151;
-        color: #fff;
-        border: none;
-        cursor: pointer;
-        font-size: 14px;
-    }
-
-    .branding .name, .nav-links li a, .cart a {
-        color: #328151;
-    }
-
-    /* Footer styles */
-    footer {
-        background-color: #c7ceca;
-        color: #fff;
-        text-align: center;
-        padding: 20px;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        left: 0;
-    }
-
-    /* Blog Section Styles */
-    .blog-posts {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 20px;
-    }
-
-    .blog-post {
-        width: calc(25% - 20px);
-        background-color: #fff;
-        margin-bottom: 20px;
-        padding: 15px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-
-    .blog-post h2 {
-        font-size: 20px;
-        color: #328151;
-        margin-bottom: 10px;
-    }
-
-    .blog-post p {
-        line-height: 1.5;
-    }
-
-    @media (max-width: 768px) {
-        .blog-post {
-            width: calc(50% - 20px);
-        }
-    }
-
-    @media (max-width: 480px) {
-        .blog-post {
-            width: 100%;
-        }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <header>
     <div class="container">
       <div class="logo">
-        <a href="index.html"><img src="logo.png" alt="Logo"></a>
-      </div>
-      <div class="search-bar">
-        <input type="text" placeholder="Search...">
-        <button type="submit">Search</button>
+        <a href="index.html"><img src="logo.png" alt="Sustainable Haven"></a>
       </div>
       <nav>
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Product</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="product.html">Product</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="cart">
-        <a href="cart.html"><img src="cart.jpeg" alt="Cart">Cart</a>
+        <a href="cart.html"><img src="cart.png" alt="Cart"></a>
       </div>
     </div>
   </header>
 
-  <main>
-    <div class="blog-posts">
-      <div class="blog-post">
-        <h2>Eco-Friendly Packaging Alternatives</h2>
-        <p>Explore the benefits and innovations in eco-friendly packaging, highlighting its importance in reducing environmental impact and enhancing sustainability in our daily lives. Learn about the materials and processes involved in creating packaging solutions that are not only efficient but also beneficial to the ecosystem.</p>
-      </div>
-      <div class="blog-post">
-        <h2>Sustainable Fashion: A New Trend</h2>
-        <p>Delve into the world of sustainable fashion, where ethics meet aesthetics. This blog discusses how the fashion industry is shifting towards more sustainable practices, the role of consumers in this change, and the impact of sustainable fashion on the environment. Discover brands that are leading the way and how you can contribute to a greener wardrobe.</p>
-      </div>
-      <div class="blog-post">
-        <h2>Green Building Materials</h2>
-        <p>Discover the latest in green building materials that are transforming the construction industry. Learn about the benefits of using sustainable materials, their impact on reducing the carbon footprint, and how they contribute to creating healthier living spaces. From bamboo flooring to recycled steel, explore the materials making buildings greener.</p>
-      </div>
-      <div class="blog-post">
-        <h2>Zero-Waste Lifestyle Tips</h2>
-        <p>Embark on a journey towards a zero-waste lifestyle with practical tips and tricks. This blog provides insights into reducing waste in your daily life, from grocery shopping to household management. Learn how simple changes can make a significant difference in minimizing your environmental impact and contributing to a sustainable future.</p>
-      </div>
-    </div>
+  <main class="container">
+    <section class="blog-posts"></section>
   </main>
 
   <footer>
     <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
   </footer>
 
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const blogPosts = [
+            {
+                title: "The Impact of Eco-Friendly Packaging",
+                content: `Eco-friendly packaging not only reduces environmental impact but also aligns with the increasing consumer demand for sustainable practices. This detailed exploration covers the transition from traditional packaging methods to innovative, sustainable alternatives. Discover how materials like biodegradable plastics, recycled paper, and plant-based packaging are revolutionizing the industry, reducing waste, and conserving resources. The shift towards eco-friendly packaging represents a critical step in addressing environmental challenges, offering a win-win solution for businesses and the planet.`
+            },
+            {
+                title: "Sustainable Fashion: Beyond the Trend",
+                content: `Sustainable fashion transcends being merely a trend; it embodies a movement towards ethical production, material innovation, and conscious consumerism. This blog delves into the essence of sustainable fashion, highlighting the importance of transparency in supply chains, the use of eco-friendly materials, and the adoption of circular fashion models. Learn about brands leading the charge in sustainability and how you can make more informed choices that contribute to a healthier environment and society.`
+            },
+            {
+                title: "Building a Greener Future: Sustainable Construction Materials",
+                content: `The construction industry faces a significant challenge: balancing development with environmental sustainability. This extensive article examines sustainable construction materials that offer solutions for a greener future. From bamboo and recycled steel to low-emission concrete, these materials are making buildings more energy-efficient, durable, and eco-friendly. Discover the latest advancements in green building and how they're paving the way for innovative architectural designs that respect our planet.`
+            },
+            {
+                title: "Living a Zero-Waste Life: Practical Tips and Insights",
+                content: `Embracing a zero-waste lifestyle can seem daunting, but with practical tips and insights, it's entirely achievable. This comprehensive guide offers strategies for minimizing waste in all areas of life, from reducing single-use plastics in the kitchen to adopting sustainable shopping habits. Learn about the benefits of composting, the importance of repurposing items, and how to make environmentally conscious choices daily. Start your journey towards a zero-waste lifestyle and make a tangible impact on the environment.`
+            }
+        ];
+
+        const blogContainer = document.querySelector('.blog-posts');
+        blogPosts.forEach(post => {
+            const postElement = document.createElement('div');
+            postElement.className = 'blog-post';
+            postElement.innerHTML = `<h2>${post.title}</h2><p>${post.content}</p>`;
+            blogContainer.appendChild(postElement);
+        });
+    });
+  </script>
 </body>
 </html>
-
 
 </body>
 </html>
