@@ -7,67 +7,85 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <div class="container">
       <div class="logo">
-        <a href="index.html"><img src="logo.png" alt="Sustainable Haven"></a>
+        <a href="index.html">
+          <img src="images/logo.png" alt="Logo">
+        </a>
       </div>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="shop.html">Shop</a></li>
-          <li><a href="product.html">Product</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        <button type="submit">Search</button>
+      </div>
+      <div class="branding">
+        <h1 class="name">Sustainable Haven</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="product.html">Product</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
       <div class="cart">
-        <a href="cart.html"><img src="cart.png" alt="Cart"></a>
+        <img src="images/cart.jpeg" alt="Cart">
+        <br>
+        <a href="cart.html">Cart</a>
       </div>
     </div>
   </header>
 
-  <main class="container">
-    <section class="blog-posts"></section>
+  <!-- Main Blog Section -->
+  <main>
+    <div class="container">
+      <section class="blog-posts">
+        <!-- Blog posts will be dynamically inserted here -->
+      </section>
+    </div>
   </main>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
+    <div class="footer">
+      <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
+    </div>
   </footer>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-        const blogPosts = [
-            {
-                title: "The Impact of Eco-Friendly Packaging",
-                content: `Eco-friendly packaging not only reduces environmental impact but also aligns with the increasing consumer demand for sustainable practices. This detailed exploration covers the transition from traditional packaging methods to innovative, sustainable alternatives. Discover how materials like biodegradable plastics, recycled paper, and plant-based packaging are revolutionizing the industry, reducing waste, and conserving resources. The shift towards eco-friendly packaging represents a critical step in addressing environmental challenges, offering a win-win solution for businesses and the planet.`
-            },
-            {
-                title: "Sustainable Fashion: Beyond the Trend",
-                content: `Sustainable fashion transcends being merely a trend; it embodies a movement towards ethical production, material innovation, and conscious consumerism. This blog delves into the essence of sustainable fashion, highlighting the importance of transparency in supply chains, the use of eco-friendly materials, and the adoption of circular fashion models. Learn about brands leading the charge in sustainability and how you can make more informed choices that contribute to a healthier environment and society.`
-            },
-            {
-                title: "Building a Greener Future: Sustainable Construction Materials",
-                content: `The construction industry faces a significant challenge: balancing development with environmental sustainability. This extensive article examines sustainable construction materials that offer solutions for a greener future. From bamboo and recycled steel to low-emission concrete, these materials are making buildings more energy-efficient, durable, and eco-friendly. Discover the latest advancements in green building and how they're paving the way for innovative architectural designs that respect our planet.`
-            },
-            {
-                title: "Living a Zero-Waste Life: Practical Tips and Insights",
-                content: `Embracing a zero-waste lifestyle can seem daunting, but with practical tips and insights, it's entirely achievable. This comprehensive guide offers strategies for minimizing waste in all areas of life, from reducing single-use plastics in the kitchen to adopting sustainable shopping habits. Learn about the benefits of composting, the importance of repurposing items, and how to make environmentally conscious choices daily. Start your journey towards a zero-waste lifestyle and make a tangible impact on the environment.`
-            }
-        ];
+      const blogPosts = [
+        {
+          title: "The Revolution of Eco-Friendly Packaging",
+          content: `In today's world, the shift towards eco-friendly packaging is not just a trend but a vital change in how we think about our environment. Traditional packaging solutions have long contributed to significant environmental degradation, leading to increased pollution and landfill waste. However, the emergence of biodegradable materials, recycled paper, and plant-based products marks a positive step towards sustainability. This blog delves deep into the benefits of eco-friendly packaging, such as reducing carbon footprint, conserving resources, and supporting biodiversity. Join us as we explore innovative packaging solutions that companies around the globe are adopting to make a difference.`
+        },
+        {
+          title: "Sustainable Fashion: Weaving the Future",
+          content: `Fashion has always been a reflection of culture and society, and today it mirrors our growing awareness of environmental issues. Sustainable fashion is not merely about choosing organic fabrics but about rethinking the entire fashion lifecycle. From ethical sourcing to production processes and ultimately to consumer habits, sustainability in fashion encompasses a broad spectrum. This comprehensive post discusses the challenges of fast fashion, celebrates the pioneers of sustainable fashion, and offers practical advice for consumers seeking to make more ethical choices. Discover how your wardrobe choices can contribute to a more sustainable world.`
+        },
+        {
+          title: "Eco-Friendly Building Materials Shaping the Future",
+          content: `The construction industry is on the cusp of a green revolution, with sustainable building materials at its core. The use of renewable resources like bamboo, recycled steel, and low-emission concrete is paving the way for eco-friendly construction practices. These materials not only reduce the environmental impact of building projects but also enhance the energy efficiency and durability of structures. This article examines the latest developments in sustainable construction, highlighting how architects and builders are integrating eco-friendly materials into their projects to create buildings that harmonize with the environment.`
+        },
+        {
+          title: "Zero-Waste Lifestyle: A Journey to Sustainability",
+          content: `Adopting a zero-waste lifestyle is an impactful way to reduce your environmental footprint and contribute to a healthier planet. This journey involves reevaluating our daily habits, from the way we shop to how we dispose of waste. By focusing on reducing, reusing, and recycling, we can significantly cut down on the amount of waste we produce. This blog post offers a roadmap to zero-waste living, featuring success stories, practical tips, and simple swaps that can make a big difference. Learn how you can embark on your zero-waste journey and join the growing community of individuals committed to making sustainable choices every day.`
+        }
+      ];
 
-        const blogContainer = document.querySelector('.blog-posts');
-        blogPosts.forEach(post => {
-            const postElement = document.createElement('div');
-            postElement.className = 'blog-post';
-            postElement.innerHTML = `<h2>${post.title}</h2><p>${post.content}</p>`;
-            blogContainer.appendChild(postElement);
-        });
+      const blogContainer = document.querySelector('.blog-posts');
+      blogPosts.forEach(post => {
+        const postElement = document.createElement('div');
+        postElement.className = 'blog-post';
+        postElement.innerHTML = `<h2>${post.title}</h2><p>${post.content}</p>`;
+        blogContainer.appendChild(postElement);
+      });
     });
   </script>
-</body>
-</html>
-
 </body>
 </html>
