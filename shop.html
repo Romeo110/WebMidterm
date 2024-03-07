@@ -35,6 +35,23 @@
 		margin-bottom: 20px;
 		text-align: center;
 	}
+
+	/* Define hover effect for Add to Cart button */
+	.add-to-cart:hover {
+    background-color: rgb(9, 154, 9);
+    color: white;
+  }
+
+  /* Override hover effect when button is disabled */
+  .add-to-cart:disabled:hover {
+    background-color: inherit; /* or specify the original background color */
+    color: inherit; /* or specify the original text color */
+  }
+
+	/* Remove hover effect completely for disabled buttons */
+  .add-to-cart:disabled {
+    cursor: not-allowed; /* Change cursor style for disabled buttons */
+  }
 </style>
 
   <!-- Header -->
