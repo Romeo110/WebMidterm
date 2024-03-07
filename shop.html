@@ -8,6 +8,10 @@
 </head>
 <body>
 <style>
+	.container {
+    flex-wrap: wrap;
+  }
+
 	.product {
 		font-size: 1.2em;
 		padding-top: 20px;
@@ -51,6 +55,18 @@
 	/* Remove hover effect completely for disabled buttons */
   .add-to-cart:disabled {
     cursor: not-allowed; /* Change cursor style for disabled buttons */
+  }
+
+	@media screen and (max-width: 768px) {
+    .product {
+      width: calc(50% - 20px); /* 50% width with 20px spacing between products for smaller screens */
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .product {
+      width: calc(100% - 20px); /* Full width with 20px spacing between products for even smaller screens */
+    }
   }
 </style>
 
@@ -100,7 +116,6 @@
 			<p class="pdescription" style="color:gray;"> $39.99 </p>
       <button class="add-to-cart" data-product-index="0">Add to Cart</button>
     </div>
-    <!-- Repeat for other products -->
     <div class="product">
       <img src="images/comb.jpg" alt="Comb" width=300px height=auto>
       <h2>Comb</h2>
@@ -114,6 +129,27 @@
       <p class="pdescription"> Description of Detergent Sheets </p>
 			<p class="pdescription" style="color:gray;"> $19.99 </p>
       <button class="add-to-cart" data-product-index="2">Add to Cart</button>
+    </div>
+		<div class="product">
+      <img src="images/foodWrap.jpg" alt="Food Wrap" width=300px height=auto>
+      <h2>Food Wrap</h2>
+      <p class="pdescription"> Description of Food Wrap </p>
+			<p class="pdescription" style="color:gray;"> $19.99 </p>
+      <button class="add-to-cart" data-product-index="3">Add to Cart</button>
+    </div>
+		<div class="product">
+      <img src="images/fork.jpg" alt="Fork" width=300px height=auto>
+      <h2>Fork</h2>
+      <p class="pdescription"> Description of Fork </p>
+			<p class="pdescription" style="color:gray;"> $9.99 </p>
+      <button class="add-to-cart" data-product-index="4">Add to Cart</button>
+    </div>
+		<div class="product">
+      <img src="images/hairbrush.jpg" alt="Hair Brush" width=300px height=auto>
+      <h2>Hair Brush</h2>
+      <p class="pdescription"> Description of Hair Brush </p>
+			<p class="pdescription" style="color:gray;"> $14.99 </p>
+      <button class="add-to-cart" data-product-index="5">Add to Cart</button>
     </div>
   </main>
 
@@ -155,6 +191,27 @@
 						description: "Description of Detergent Sheets",
 						quantity: 1,
 						price: 19.99
+				},
+				{
+						name: "Food Wrap",
+						image: "images/foodWrap.jpg",
+						description: "Description of Food Wrap",
+						quantity: 1,
+						price: 19.99
+				},
+				{
+						name: "Fork",
+						image: "images/fork.jpg",
+						description: "Description of Fork",
+						quantity: 1,
+						price: 9.99
+				},
+				{
+						name: "Hair Brush",
+						image: "images/hairbrush.jpg",
+						description: "Description of Hair Brush",
+						quantity: 1,
+						price: 14.99
 				},
 		];
 
