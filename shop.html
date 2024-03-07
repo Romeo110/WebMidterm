@@ -59,7 +59,7 @@
             <li><a href="shop.html">Shop</a></li>
             <li><a href="#">Product</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><a href="blog.html">Blog</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
         </nav>
@@ -81,7 +81,7 @@
       <h2>Bag</h2>
       <p class="pdescription"> Description of Bag </p>
 			<p class="pdescription" style="color:gray;"> $39.99 </p>
-      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-cart" data-product-index="0">Add to Cart</button>
     </div>
     <!-- Repeat for other products -->
     <div class="product">
@@ -89,14 +89,14 @@
       <h2>Comb</h2>
       <p class="pdescription"> Description of Comb </p>
 			<p class="pdescription" style="color:gray;"> $29.99 </p>
-      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-cart" data-product-index="1">Add to Cart</button>
     </div>
 		<div class="product">
       <img src="images/detergentSheets.jpg" alt="Detergent Sheets" width=300px height=auto>
       <h2>Detergent Sheets</h2>
       <p class="pdescription"> Description of Detergent Sheets </p>
 			<p class="pdescription" style="color:gray;"> $19.99 </p>
-      <button class="add-to-cart">Add to Cart</button>
+      <button class="add-to-cart" data-product-index="2">Add to Cart</button>
     </div>
   </main>
 
@@ -142,28 +142,37 @@
 		];
 
 		// Initialize the cart from localStorage or create an empty array if it doesn't exist
-		// var cart = JSON.parse(localStorage.getItem('cart')) || []; ////////////////////////////////////////////
-		var cart = [];
+		var cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 		$(document).ready(function() {
-				// Add event listener for "Add to Cart" button clicks on the container element
-				$(".container").on("click", ".add-to-cart", function() {
-						// Get the index of the product in the DOM
-						var index = $(this).closest(".product").index();
-						// Get the product information from the products array
-						var product = products[index];
-						// Add the product to the cart
-						addToCart(product);
-						// Change the button text to "Added to cart"
-						$(this).text("Added to cart");
-						// Disable the button to prevent further clicks
-						$(this).prop("disabled", true);
-						// Show a fade effect for the cart notification of this specific product
-						$(".cart-notification").text("Added to cart: " + product.name).fadeIn().delay(1000).fadeOut();
+			// Add event listener for "Add to Cart" button clicks
+			$(".add-to-cart").each(function(index, button) {
+				var productIndex = parseInt($(button).data("product-index"));
+				if (isProductInCart(products[productIndex])) {
+					disableAddToCartButton($(button));
+				}
+				$(button).click(function() {
+					addToCart(products[productIndex]);
+					disableAddToCartButton($(button));
+					$(".cart-notification").text("Added to cart: " + products[productIndex].name).fadeIn().delay(1000).fadeOut();
 				});
+			});
 		});
 
-		// Function to add a product to the cart (this is just an example, you would need to implement your own cart logic)
+		// Function to check if a product is in the cart
+		function isProductInCart(product) {
+			return cart.some(function(item) {
+				return item.name === product.name;
+			});
+		}
+
+		// Function to disable the "Add to Cart" button
+		function disableAddToCartButton(button) {
+			button.prop("disabled", true);
+			button.text("Added to Cart");
+		}
+
+		// Function to add a product to the cart
 		function addToCart(product) {
 				// Implement your cart logic here
 				cart.push(product);
