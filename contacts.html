@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sustainable Haven</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .hero-section {
+            background-image: url('images/hero.jpg');
+            background-size: cover;
+            /* Ensure the background image covers the entire section */
+            background-position: center;
+            /* Center the background image */
+            text-align: center;
+            color: white;
+            padding: 275px 0;
+            filter: blur(5px);
+        }
+        
+        .hero-section h2 {
+            font-size: 2em;
+            /* Increase font size */
+        }
+        
+        .section-container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 40px;
+            margin: 90px;
+        }
+        
+        .hq-section,
+        .careers-section,
+        .press-section,
+        .blog-section {
+            padding: 50px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+            max-width: 590px;
+        }
+        
+        .hq-section h3,
+        .careers-section h3,
+        .press-section h3,
+        .blog-section h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .hq-section p,
+        .careers-section p,
+        .press-section p,
+        .blog-section p {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+        
+        .subscribe-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+            <!-- Business Name and Navigation -->
+            <div class="branding">
+                <h1 class="name">Sustainable Haven</h1>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Cart -->
+            <div class="cart">
+                <img src="images/cart.jpeg" alt="Cart">
+                </br>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h2><strong>We are Here for You</strong></h2>
+        <p>Our team is ready to help you and answer any questions you may have.</p>
+        <p>Email: info@sustainablehaven.com</p>
+        <p>Phone: 123-456-7890</p>
+    </section>
+
+    <div class="section-container">
+        <section class="hq-section">
+            <h3>Sustainable Haven HQ</h3>
+            <p>1600 Amphitheatre Parkway<br>Mountain View, CA 94043, USA</p>
+            <p>(650) 253-0000</p>
+            <p>See all locations near you.</p>
+        </section>
+
+        <section class="careers-section">
+            <h3>Careers at Sustainable Haven</h3>
+            <p>Join our team and be part of something great! At Sustainable Haven, we value innovation, teamwork, and sustainability. Explore our teams and job openings to find the perfect fit for you.</p>
+        </section>
+
+        <section class="press-section">
+            <h3>Press</h3>
+            <p>If you are a member of the press, email us at press@sustainablehaven.com</p>
+        </section>
+
+        <section class="blog-section">
+            <h3>Visit our Blog</h3>
+            <p>Stay updated with our latest news, tips, and stories on sustainability.</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js">
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.querySelector('.hero-section').style.filter = 'blur(0)';
+            }, 750); // Adjust the delay (in milliseconds) as needed
+        });
+    </script>
+</body>
+
+
+</html>

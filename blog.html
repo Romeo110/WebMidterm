@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog - Sustainable Haven - Eco-Friendly Products</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Sustainable Haven - Eco-Friendly Products</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <!-- Header -->
@@ -41,59 +43,55 @@
     </div>
   </header>
 
-  <!-- Main Blog Section -->
-  <main>
-    <div class="container">
-      <!-- Blog Title Section -->
-      <section class="blog-title-section">
-        <h2>Insights and Innovations</h2>
-        <p>Join us on our journey to sustainability through our latest blogs on eco-friendly living, innovations, and tips for a sustainable lifestyle.</p>
-      </section>
+    <!-- Main Blog Section -->
+    <main>
+        <div class="container">
+            <!-- Blog Title Section -->
+            <section class="blog-title-section">
+                <h2>Insights and Innovations</h2>
+                <p>Join us on our journey to sustainability through our latest blogs on eco-friendly living, innovations, and tips for a sustainable lifestyle.</p>
+            </section>
 
 
-      <!-- Blog Posts Section -->
-      <section class="blog-posts">
-        <!-- Blog posts will be dynamically inserted here -->
-      </section>
-    </div>
-  </main>
+            <!-- Blog Posts Section -->
+            <section class="blog-posts">
+                <!-- Blog posts will be dynamically inserted here -->
+            </section>
+        </div>
+    </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer">
-      <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
+        </div>
+    </footer>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const blogPosts = [
-        {
-          title: "The Revolution of Eco-Friendly Packaging",
-          content: `In today's world, the shift towards eco-friendly packaging is not just a trend but a vital change in how we think about our environment. Traditional packaging solutions have long contributed to significant environmental degradation, leading to increased pollution and landfill waste. However, the emergence of biodegradable materials, recycled paper, and plant-based products marks a positive step towards sustainability. This blog delves deep into the benefits of eco-friendly packaging, such as reducing carbon footprint, conserving resources, and supporting biodiversity. Join us as we explore innovative packaging solutions that companies around the globe are adopting to make a difference.`
-        },
-        {
-          title: "Sustainable Fashion: Weaving the Future",
-          content: `Fashion has always been a reflection of culture and society, and today it mirrors our growing awareness of environmental issues. Sustainable fashion is not merely about choosing organic fabrics but about rethinking the entire fashion lifecycle. From ethical sourcing to production processes and ultimately to consumer habits, sustainability in fashion encompasses a broad spectrum. This comprehensive post discusses the challenges of fast fashion, celebrates the pioneers of sustainable fashion, and offers practical advice for consumers seeking to make more ethical choices. Discover how your wardrobe choices can contribute to a more sustainable world.`
-        },
-        {
-          title: "Eco-Friendly Building Materials Shaping the Future",
-          content: `The construction industry is on the cusp of a green revolution, with sustainable building materials at its core. The use of renewable resources like bamboo, recycled steel, and low-emission concrete is paving the way for eco-friendly construction practices. These materials not only reduce the environmental impact of building projects but also enhance the energy efficiency and durability of structures. This article examines the latest developments in sustainable construction, highlighting how architects and builders are integrating eco-friendly materials into their projects to create buildings that harmonize with the environment.`
-        },
-        {
-          title: "Zero-Waste Lifestyle: A Journey to Sustainability",
-          content: `Adopting a zero-waste lifestyle is an impactful way to reduce your environmental footprint and contribute to a healthier planet. This journey involves reevaluating our daily habits, from the way we shop to how we dispose of waste. By focusing on reducing, reusing, and recycling, we can significantly cut down on the amount of waste we produce. This blog post offers a roadmap to zero-waste living, featuring success stories, practical tips, and simple swaps that can make a big difference. Learn how you can embark on your zero-waste journey and join the growing community of individuals committed to making sustainable choices every day.`
-        }
-      ];
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const blogPosts = [{
+                title: "The Revolution of Eco-Friendly Packaging",
+                content: `In today's world, the shift towards eco-friendly packaging is not just a trend but a vital change in how we think about our environment. Traditional packaging solutions have long contributed to significant environmental degradation, leading to increased pollution and landfill waste. However, the emergence of biodegradable materials, recycled paper, and plant-based products marks a positive step towards sustainability. This blog delves deep into the benefits of eco-friendly packaging, such as reducing carbon footprint, conserving resources, and supporting biodiversity. Join us as we explore innovative packaging solutions that companies around the globe are adopting to make a difference.`
+            }, {
+                title: "Sustainable Fashion: Weaving the Future",
+                content: `Fashion has always been a reflection of culture and society, and today it mirrors our growing awareness of environmental issues. Sustainable fashion is not merely about choosing organic fabrics but about rethinking the entire fashion lifecycle. From ethical sourcing to production processes and ultimately to consumer habits, sustainability in fashion encompasses a broad spectrum. This comprehensive post discusses the challenges of fast fashion, celebrates the pioneers of sustainable fashion, and offers practical advice for consumers seeking to make more ethical choices. Discover how your wardrobe choices can contribute to a more sustainable world.`
+            }, {
+                title: "Eco-Friendly Building Materials Shaping the Future",
+                content: `The construction industry is on the cusp of a green revolution, with sustainable building materials at its core. The use of renewable resources like bamboo, recycled steel, and low-emission concrete is paving the way for eco-friendly construction practices. These materials not only reduce the environmental impact of building projects but also enhance the energy efficiency and durability of structures. This article examines the latest developments in sustainable construction, highlighting how architects and builders are integrating eco-friendly materials into their projects to create buildings that harmonize with the environment.`
+            }, {
+                title: "Zero-Waste Lifestyle: A Journey to Sustainability",
+                content: `Adopting a zero-waste lifestyle is an impactful way to reduce your environmental footprint and contribute to a healthier planet. This journey involves reevaluating our daily habits, from the way we shop to how we dispose of waste. By focusing on reducing, reusing, and recycling, we can significantly cut down on the amount of waste we produce. This blog post offers a roadmap to zero-waste living, featuring success stories, practical tips, and simple swaps that can make a big difference. Learn how you can embark on your zero-waste journey and join the growing community of individuals committed to making sustainable choices every day.`
+            }];
 
-      const blogContainer = document.querySelector('.blog-posts');
-      blogPosts.forEach(post => {
-        const postElement = document.createElement('div');
-        postElement.className = 'blog-post';
-        postElement.innerHTML = `<h2>${post.title}</h2><p>${post.content}</p>`;
-        blogContainer.appendChild(postElement);
-      });
-    });
-  </script>
+            const blogContainer = document.querySelector('.blog-posts');
+            blogPosts.forEach(post => {
+                const postElement = document.createElement('div');
+                postElement.className = 'blog-post';
+                postElement.innerHTML = `<h2>${post.title}</h2><p>${post.content}</p>`;
+                blogContainer.appendChild(postElement);
+            });
+        });
+    </script>
 </body>
+
 </html>

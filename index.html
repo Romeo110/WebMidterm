@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sustainable Haven - Eco-Friendly Products</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Haven - Eco-Friendly Products</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
+    <!-- Header -->
+    <header>
+        <div class="container">
 
       <div class="logo">
         <a href="home.html">
@@ -45,74 +47,75 @@
     </div>
   </header>
 
-  <!-- Background Images -->
-  <section class="background-images">
-    <div class="background-text">
-      <h2>Discover sustainability at its finest with Sustainable Haven's eco-conscious products, making shopping for a greener tomorrow a breeze!</h2>
-      <div class="shop-button">
-        <a href="shop.html">Shop Now!</a>
-      </div>
-    </div>
-  </section>
-  
-
-  <!-- Text Section -->
-  <section class="text-section">
-    <h3 class="section-heading">Check out some of our Products!</h3>
-  </section>
-
-  <!-- Images Section -->
-  <section class="image-section">
-    <div class="image-slider">
-      <!-- Images Container -->
-      <div class="image-container"></div>
-    </div>
-    <!-- Navigation Arrows -->
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-  </section>
+    <!-- Background Images -->
+    <section class="background-images">
+        <div class="background-text">
+            <h2>Discover sustainability at its finest with Sustainable Haven's eco-conscious products, making shopping for a greener tomorrow a breeze!</h2>
+            <div class="shop-button">
+                <a href="shop.html">Shop Now!</a>
+            </div>
+        </div>
+    </section>
 
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer">
-      <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- Text Section -->
+    <section class="text-section">
+        <h3 class="section-heading">Check out some of our Products!</h3>
+    </section>
 
-  <script>
-    var cart = [];
-    localStorage.setItem('cart', JSON.stringify(cart));
+    <!-- Images Section -->
+    <section class="image-section">
+        <div class="image-slider">
+            <!-- Images Container -->
+            <div class="image-container"></div>
+        </div>
+        <!-- Navigation Arrows -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
 
-    const images = [
-      'images/bag.jpg',
-      'images/comb.jpg',
-      'images/detergentSheets.jpg',
-      'images/foodWrap.jpg',
-      'images/fork.jpg',
-      'images/hairbrush.jpg',
-      'images/soap.jpg',
-      'images/spoon.jpeg',
-      'images/straws.jpg',
-      'images/toothbrush.jpg'
-    ];
 
-    const imageContainer = document.querySelector('.image-container');
-    images.forEach(image => {
-      const img = document.createElement('img');
-      img.src = image;
-      img.alt = 'Image';
-      imageContainer.appendChild(img);
-    });
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
+        </div>
+    </footer>
 
-    document.querySelector('.next').addEventListener('click', function() {
-      document.querySelector('.image-slider').scrollLeft += 250; // Adjust scroll distance
-    });
+    <script>
+        var cart = [];
+        localStorage.setItem('cart', JSON.stringify(cart));
 
-    document.querySelector('.prev').addEventListener('click', function() {
-      document.querySelector('.image-slider').scrollLeft -= 250; // Adjust scroll distance
-    });
-  </script>
-  <script src="scripts.js"></script>
+        const images = [
+            'images/bag.jpg',
+            'images/comb.jpg',
+            'images/detergentSheets.jpg',
+            'images/foodWrap.jpg',
+            'images/fork.jpg',
+            'images/hairbrush.jpg',
+            'images/soap.jpg',
+            'images/spoon.jpeg',
+            'images/straws.jpg',
+            'images/toothbrush.jpg'
+        ];
+
+        const imageContainer = document.querySelector('.image-container');
+        images.forEach(image => {
+            const img = document.createElement('img');
+            img.src = image;
+            img.alt = 'Image';
+            imageContainer.appendChild(img);
+        });
+
+        document.querySelector('.next').addEventListener('click', function() {
+            document.querySelector('.image-slider').scrollLeft += 250; // Adjust scroll distance
+        });
+
+        document.querySelector('.prev').addEventListener('click', function() {
+            document.querySelector('.image-slider').scrollLeft -= 250; // Adjust scroll distance
+        });
+    </script>
+    <script src="scripts.js"></script>
 </body>
+
 </html>
