@@ -23,6 +23,52 @@
             font-size: 2em;
             /* Increase font size */
         }
+        
+        .section-container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            margin: 20px;
+        }
+        
+        .hq-section,
+        .careers-section,
+        .press-section,
+        .blog-section {
+            padding: 15px;
+            background-color: #f5f5f5;
+            border-radius: 10px;
+        }
+        
+        .hq-section h3,
+        .careers-section h3,
+        .press-section h3,
+        .blog-section h3 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .hq-section p,
+        .careers-section p,
+        .press-section p,
+        .blog-section p {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+        
+        .subscribe-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 20px;
+        }
     </style>
 </head>
 
@@ -73,19 +119,29 @@
         <p>Phone: 123-456-7890</p>
     </section>
 
-    <!-- Contact Form -->
-    <section class="contact-form">
-        <h3>Contact Us</h3>
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+    <div class="section-container">
+        <section class="hq-section">
+            <h3>Sustainable Haven HQ</h3>
+            <p>1600 Amphitheatre Parkway<br>Mountain View, CA 94043, USA</p>
+            <p>(650) 253-0000</p>
+            <p>See all locations near you.</p>
+        </section>
+
+        <section class="careers-section">
+            <h3>Careers at Sustainable Haven</h3>
+            <p>Join our team and be part of something great! At Sustainable Haven, we value innovation, teamwork, and sustainability. Explore our teams and job openings to find the perfect fit for you.</p>
+        </section>
+
+        <section class="press-section">
+            <h3>Press</h3>
+            <p>If you are a member of the press, email us at press@sustainablehaven.com</p>
+        </section>
+
+        <section class="blog-section">
+            <h3>Visit our Blog</h3>
+            <p>Stay updated with our latest news, tips, and stories on sustainability.</p>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer>
