@@ -1,264 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Sustainable Haven</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Sustainable Haven</title>
+    <link rel="stylesheet" href="styles.css">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-    }
-
-    /* Header styles */
-    header {
-      background-color: #fff;
-      color: #328151;
-      padding: 20px 0;
-    }
-
-    .container {
-      max-width: 100%;
-      margin: 0 auto;
-      padding: 0 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .logo {
-      margin-right: 10px; /* Add margin to create space between logo and other elements */
-    }
-
-    .logo img {
-      width: 75px; /* Adjust the width of the logo */
-    }
-
-    .search-bar {
-      /* Ensure the search bar is aligned to the left */
-      display: flex;
-      align-items: center;
-      width: 21%; /* Set width to 21% */
-    }
-
-    .search-bar input[type="text"] {
-      padding: 12px;
-      width: 200px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    .search-bar button {
-      padding: 12px 20px;
-      background-color: #328151;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 14px;
-    }
-
-    .branding {
-      /* Ensure the branding is centered */
-      text-align: center;
-      flex-grow: 1;
-    }
-
-    .name {
-      font-size: 28px;
-      display: inline-block;
-    }
-
-    .nav-links {
-      list-style: none;
-      margin-top: 10px;
-      text-align: center;
-    }
-
-    .nav-links li {
-      display: inline;
-      margin-left: 20px;
-    }
-
-    .nav-links li:first-child {
-      margin-left: 0;
-    }
-
-    .nav-links li a {
-      color: #328151;
-      text-decoration: none;
-    }
-
-    .cart {
-      /* Ensure the cart is aligned to the right */
-      text-align: right;
-      width: 21%; /* Set width to 21% */
-    }
-
-    .cart a {
-      color: #328151;
-      text-decoration: none;
-      margin-right: 5px; /* Add some margin between the link and the image */
-    }
-
-    .cart img {
-      width: 30px;
-    }
-
-    /* Cart hover effect */
-    .cart a:hover {
-      color: #ffc107; /* Change text color on hover */
-    }
-
-    /* Search button hover effect */
-    .search-bar button:hover {
-      background-color: #4CAF50; /* Change background color on hover */
-      color: white; /* Change text color on hover */
-    }
-
-    /* Navigation links hover effect */
-    .nav-links li a:hover {
-      color: #ffc107; /* Change text color on hover */
-    }
-
-    /* Footer styles */
-    footer {
-      background-color: #c7ceca;
-      color: #fff;
-      text-align: center;
-      
-      padding: 20px;
-      bottom: 0;
-      width: 100%;
-      left: 0;
-      
-    }
-
-    @media screen and (max-width: 600px) {
-      .branding {
-        flex-basis: 100%; /* Full width on smaller screens */
-      }
-    }
-
-    /* About Us section styles */
-    .about {
-      background-color: #fff;
-      padding: 50px 20px; /* Adjusted padding */
-      text-align: center;
-      color: #328151;
-      border-radius: 20px; /* Rounded corners */
-      margin: 20px 0; /* Added margin */
-    }
-
-    .about h2 {
-      width: 80%;
-      display: inline-block;
-      width: 80%;
-      background-color: #e0f2e9;
-      border-radius: 20px;
-      padding: 10px 0;
-      margin: 0 auto;
-      margin-bottom: 20px;
-    }
-
-    .about p {
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
-      color: #555;
-      font-size: 16px;
-      line-height: 1.6;
-      width: 80%;
-      display: inline-block;
-      width: 80%;
-      background-color: #e0f2e9;
-      border-radius: 20px;
-      padding: 20px 0;
-      margin: 0 auto;
-      
-    }
-  </style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+        /* Header styles */
+        
+        header {
+            background-color: #fff;
+            color: #328151;
+            padding: 20px 0;
+        }
+        
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            margin-right: 10px;
+            /* Add margin to create space between logo and other elements */
+        }
+        
+        .logo img {
+            width: 75px;
+            /* Adjust the width of the logo */
+        }
+        
+        .search-bar {
+            /* Ensure the search bar is aligned to the left */
+            display: flex;
+            align-items: center;
+            width: 21%;
+            /* Set width to 21% */
+        }
+        
+        .search-bar input[type="text"] {
+            padding: 12px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .search-bar button {
+            padding: 12px 20px;
+            background-color: #328151;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .branding {
+            /* Ensure the branding is centered */
+            text-align: center;
+            flex-grow: 1;
+        }
+        
+        .name {
+            font-size: 28px;
+            display: inline-block;
+        }
+        
+        .nav-links {
+            list-style: none;
+            margin-top: 10px;
+            text-align: center;
+        }
+        
+        .nav-links li {
+            display: inline;
+            margin-left: 20px;
+        }
+        
+        .nav-links li:first-child {
+            margin-left: 0;
+        }
+        
+        .nav-links li a {
+            color: #328151;
+            text-decoration: none;
+        }
+        
+        .cart {
+            /* Ensure the cart is aligned to the right */
+            text-align: right;
+            width: 21%;
+            /* Set width to 21% */
+        }
+        
+        .cart a {
+            color: #328151;
+            text-decoration: none;
+            margin-right: 5px;
+            /* Add some margin between the link and the image */
+        }
+        
+        .cart img {
+            width: 30px;
+        }
+        /* Cart hover effect */
+        
+        .cart a:hover {
+            color: #ffc107;
+            /* Change text color on hover */
+        }
+        /* Search button hover effect */
+        
+        .search-bar button:hover {
+            background-color: #4CAF50;
+            /* Change background color on hover */
+            color: white;
+            /* Change text color on hover */
+        }
+        /* Navigation links hover effect */
+        
+        .nav-links li a:hover {
+            color: #ffc107;
+            /* Change text color on hover */
+        }
+        /* Footer styles */
+        
+        footer {
+            background-color: #c7ceca;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+        }
+        
+        @media screen and (max-width: 600px) {
+            .branding {
+                flex-basis: 100%;
+                /* Full width on smaller screens */
+            }
+        }
+        /* About Us section styles */
+        
+        .about {
+            background-color: #fff;
+            padding: 50px 20px;
+            /* Adjusted padding */
+            text-align: center;
+            color: #328151;
+            border-radius: 20px;
+            /* Rounded corners */
+            margin: 20px 0;
+            /* Added margin */
+        }
+        
+        .about h2 {
+            width: 80%;
+            display: inline-block;
+            width: 80%;
+            background-color: #e0f2e9;
+            border-radius: 20px;
+            padding: 10px 0;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        
+        .about p {
+            color: #555;
+            font-size: 16px;
+            line-height: 1.6;
+            width: 80%;
+            display: inline-block;
+            width: 80%;
+            background-color: #e0f2e9;
+            border-radius: 20px;
+            padding: 20px 0;
+            margin: 0 auto;
+        }
+    </style>
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
+    <!-- Header -->
+    <header>
+        <div class="container">
 
-      <div class="logo">
-        <a href="index.html">
-          <img src="images/logo.png" alt="Logo">
-        </a>
-      </div>
-      <!-- Search Bar -->
-      <div class="search-bar">
-        <input type="text" placeholder="Search...">
-        <button type="submit">Search</button>
-      </div>
-      <!-- Business Name and Navigation -->
-      <div class="branding">
-        <h1 class="name">Sustainable Haven</h1>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <!-- Cart -->
-      <div class="cart">
-        <img src="images/cart.jpeg" alt="Cart">
-      </br>
-        <a href="cart.html">Cart</a>
-      </div>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+            <!-- Business Name and Navigation -->
+            <div class="branding">
+                <h1 class="name">Sustainable Haven</h1>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Cart -->
+            <div class="cart">
+                <img src="images/cart.jpeg" alt="Cart">
+                </br>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="about">
+        <h2>About Us</h2>
+        <p>Sustainable Haven is dedicated to leading the charge towards a more sustainable future. Our relentless commitment revolves around providing eco-friendly and sustainable products that not only enrich lives but also contribute to a healthier planet.
+            With a firm belief in the profound impact of conscious consumer choices, we strive to offer high-quality alternatives to conventional products. At Sustainable Haven, our mission goes beyond profit margins; it's about fostering a global community
+            dedicated to reducing waste and minimizing our environmental footprint. We firmly believe that even the smallest changes can catalyze significant transformations, and it's this belief that drives our relentless pursuit of innovation and sustainability.
+            From biodegradable packaging to ethically sourced materials, every aspect of our product line embodies our unwavering dedication to environmental stewardship. By embracing innovation and sustainability, we aim to inspire individuals and businesses
+            alike to join us on this journey towards a greener, more sustainable future. Together, let's pave the way for a world where sustainability isn't just an option – it's a way of life. Join us at Sustainable Haven, where every purchase is a step
+            towards a brighter, greener tomorrow.</p>
     </div>
-  </header>
+    <section class="reviews">
+        <h2>What Our Customers Say</h2>
+        <div class="review-cards">
+            <div class="review-card">
+                <p>"Sustainable Haven has completely changed the way I shop for home goods. Their eco-friendly products are not only innovative but also of great quality. Highly recommend!"</p>
+                <h3>– Jamie L.</h3>
+            </div>
+            <div class="review-card">
+                <p>"I'm genuinely impressed by the commitment Sustainable Haven shows towards sustainability. Their products are a testament to their mission. Love the zero-waste packaging!"</p>
+                <h3>– Alex G.</h3>
+            </div>
+            <div class="review-card">
+                <p>"From ordering to delivery, everything was seamless. It's refreshing to see a company that truly cares about the planet and its customers. Keep up the great work!"</p>
+                <h3>– Samira K.</h3>
+            </div>
+        </div>
+    </section>
 
-  <div class="about">
-    <h2>About Us</h2>
-    <p>Sustainable Haven is dedicated to leading the charge towards a more sustainable future. Our relentless commitment revolves around providing eco-friendly and sustainable products that not only enrich lives but also contribute to a healthier planet. With a firm belief in the profound impact of conscious consumer choices, we strive to offer high-quality alternatives to conventional products.
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
+        </div>
+    </footer>
 
-        At Sustainable Haven, our mission goes beyond profit margins; it's about fostering a global community dedicated to reducing waste and minimizing our environmental footprint. We firmly believe that even the smallest changes can catalyze significant transformations, and it's this belief that drives our relentless pursuit of innovation and sustainability.
-        
-        From biodegradable packaging to ethically sourced materials, every aspect of our product line embodies our unwavering dedication to environmental stewardship. By embracing innovation and sustainability, we aim to inspire individuals and businesses alike to join us on this journey towards a greener, more sustainable future.
-        
-        Together, let's pave the way for a world where sustainability isn't just an option – it's a way of life. Join us at Sustainable Haven, where every purchase is a step towards a brighter, greener tomorrow.</p>
-  </div>
-  <section class="reviews">
-  <h2>What Our Customers Say</h2>
-    <div class="review-cards">
-      <div class="review-card">
-        <p>"Sustainable Haven has completely changed the way I shop for home goods. Their eco-friendly products are not only innovative but also of great quality. Highly recommend!"</p>
-        <h3>– Jamie L.</h3>
-      </div>
-      <div class="review-card">
-        <p>"I'm genuinely impressed by the commitment Sustainable Haven shows towards sustainability. Their products are a testament to their mission. Love the zero-waste packaging!"</p>
-        <h3>– Alex G.</h3>
-      </div>
-      <div class="review-card">
-        <p>"From ordering to delivery, everything was seamless. It's refreshing to see a company that truly cares about the planet and its customers. Keep up the great work!"</p>
-        <h3>– Samira K.</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer">
-      <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
-    </div>
-  </footer>
-  
 </body>
 <!-- Footer -->
 

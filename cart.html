@@ -1,166 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shop - Sustainable Haven</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Sustainable Haven</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-<style>
-	.checkout-cart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-  }
-  .items {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 800px;
-    padding: 20px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  .items img {
-    width: 100px;
-    height: 100px;
-    margin-right: 20px;
-  }
-	.total {
-		display: flex;
-    text-align: right;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-  }
-	.remove-item:hover {
-    background-color: rgb(251, 5, 5);
-    color: white;
-  }
-</style>
+    <style>
+        .checkout-cart {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        
+        .items {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .items img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+        }
+        
+        .total {
+            display: flex;
+            text-align: right;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+        
+        .remove-item:hover {
+            background-color: rgb(251, 5, 5);
+            color: white;
+        }
+    </style>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-			<div class="logo">
-        <a href="index.html">
-          <img src="images/logo.png" alt="Logo">
-        </a>
-      </div>
-      <!-- Search Bar -->
-      <div class="search-bar">
-        <input type="text" placeholder="Search...">
-        <button type="submit">Search</button>
-      </div>
-      <!-- Business Name and Navigation -->
-      <div class="branding">
-        <h1 class="logo">Sustainable Haven</h1>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <!-- Cart -->
-      <div class="cart">
-        <img src="images/cart.jpeg" alt="Cart">
-      </br>
-        <a href="cart.html">Cart</a>
-      </div>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+            <!-- Business Name and Navigation -->
+            <div class="branding">
+                <h1 class="logo">Sustainable Haven</h1>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="#">Product</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Cart -->
+            <div class="cart">
+                <img src="images/cart.jpeg" alt="Cart">
+                </br>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="background-images">
+        <div class="background-text">
+            <h2>Cart is Empty!</h2>
+            <div class="shop-button">
+                <a href="shop.html">Shop Now!</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="checkout-cart">
+        <!-- Cart items will be dynamically generated here -->
     </div>
-  </header>
 
-	<section class="background-images">
-		<div class="background-text">
-			<h2>Cart is Empty!</h2>
-			<div class="shop-button">
-				<a href="shop.html">Shop Now!</a>
-			</div>
-		</div>
-	</section>
-
-	<div class="checkout-cart">
-		<!-- Cart items will be dynamically generated here -->
-	</div>
-
-	<div class="total">
-		<h2>Subtotal: $<span class="subtotal">0.00</span></h2>
-		<h2>Tax: $<span class="tax">0.00</span></h2>
-		<h2>Total: $<span class="total-amount">0.00</span><h2>
-	</div>
-
-  <!-- Main Content -->
-  <main class="container">
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer">
-      <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
+    <div class="total">
+        <h2>Subtotal: $<span class="subtotal">0.00</span></h2>
+        <h2>Tax: $<span class="tax">0.00</span></h2>
+        <h2>Total: $<span class="total-amount">0.00</span>
+            <h2>
     </div>
-  </footer>
 
-  <script src="jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Main Content -->
+    <main class="container">
+    </main>
 
-  <!-- <script src="shopScript.js"></script> -->
-  <script>
-		$(document).ready(function() {
-			// Retrieve cart items from local storage
-			var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
+        </div>
+    </footer>
 
-			// Function to calculate subtotal, tax, and total
-			function calculateTotals() {
-        var subtotal = 0;
-        var taxRate = 0.0625; // Assuming a 6.25% tax rate, you can adjust this as needed
-        // Calculate subtotal
-        cartItems.forEach(function(item) {
-            subtotal += item.price * item.quantity;
-        });
-        // Calculate tax
-        var tax = subtotal * taxRate;
-        // Calculate total with tax
-        var total = subtotal + tax;
-        // Update the HTML with the calculated values
-        $('.subtotal').text(subtotal.toFixed(2));
-        $('.tax').text(tax.toFixed(2));
-        $('.total-amount').text(total.toFixed(2));
-    	}
+    <script src="jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-			// Function to remove an item from the cart
-			function removeFromCart(index) {
-				// Remove the item from the cart array
-				cartItems.splice(index, 1);
-				// Save the updated cart to local storage
-				localStorage.setItem('cart', JSON.stringify(cartItems));
-				// Remove the corresponding item HTML from the checkout cart
-				$('.checkout-cart .items').eq(index).remove();
-				// Recalculate subtotal, tax, and total
-        calculateTotals();
-				// Check if the cart is empty after removal
-				if (cartItems.length === 0) {
-					$('.background-images').show(); // Show empty cart message
-					$('.total').hide(); // Hide total section
-				}
-			}
+    <!-- <script src="shopScript.js"></script> -->
+    <script>
+        $(document).ready(function() {
+            // Retrieve cart items from local storage
+            var cartItems = JSON.parse(localStorage.getItem('cart')) || [];
 
-			// If cart is empty, display empty cart message
-			if (cartItems.length === 0) {
-				$('.background-images').show(); // Show empty cart message
-				$('.total').hide(); // Hide total section
-			} else {
-				// Iterate over cart items and generate HTML for each item
-				cartItems.forEach(function(item, index) {
-					var itemHTML = `
+            // Function to calculate subtotal, tax, and total
+            function calculateTotals() {
+                var subtotal = 0;
+                var taxRate = 0.0625; // Assuming a 6.25% tax rate, you can adjust this as needed
+                // Calculate subtotal
+                cartItems.forEach(function(item) {
+                    subtotal += item.price * item.quantity;
+                });
+                // Calculate tax
+                var tax = subtotal * taxRate;
+                // Calculate total with tax
+                var total = subtotal + tax;
+                // Update the HTML with the calculated values
+                $('.subtotal').text(subtotal.toFixed(2));
+                $('.tax').text(tax.toFixed(2));
+                $('.total-amount').text(total.toFixed(2));
+            }
+
+            // Function to remove an item from the cart
+            function removeFromCart(index) {
+                // Remove the item from the cart array
+                cartItems.splice(index, 1);
+                // Save the updated cart to local storage
+                localStorage.setItem('cart', JSON.stringify(cartItems));
+                // Remove the corresponding item HTML from the checkout cart
+                $('.checkout-cart .items').eq(index).remove();
+                // Recalculate subtotal, tax, and total
+                calculateTotals();
+                // Check if the cart is empty after removal
+                if (cartItems.length === 0) {
+                    $('.background-images').show(); // Show empty cart message
+                    $('.total').hide(); // Hide total section
+                }
+            }
+
+            // If cart is empty, display empty cart message
+            if (cartItems.length === 0) {
+                $('.background-images').show(); // Show empty cart message
+                $('.total').hide(); // Hide total section
+            } else {
+                // Iterate over cart items and generate HTML for each item
+                cartItems.forEach(function(item, index) {
+                    var itemHTML = `
 						<div class="items">
 							<img src="${item.image}" alt="${item.name}">
 							<div>
@@ -171,35 +178,36 @@
 							</div>
 						</div>
 					`;
-					// Append the item HTML to the checkout-cart div
-					$('.checkout-cart').append(itemHTML);
+                    // Append the item HTML to the checkout-cart div
+                    $('.checkout-cart').append(itemHTML);
 
-					// Attach change event handler to quantity input
-					$('.quantity-input').eq(index).on('change', function() {
-						// Get the new quantity value
-						var newQuantity = parseInt($(this).val());
-						// Update the quantity of the corresponding product in the cart array
-						cartItems[index].quantity = newQuantity;
-						// Save the updated cart to local storage
-						localStorage.setItem('cart', JSON.stringify(cartItems));
-						// Recalculate subtotal, tax, and total
-						calculateTotals();
-					});
-				});
-				$('.background-images').hide(); // Hide empty cart message
-				// Show total section and calculate totals
-				$('.total').show();
-				calculateTotals();
-			}
-			
-			// Attach click event handler to the remove buttons
-			$('.checkout-cart').on('click', '.remove-item', function() {
-				// Get the index of the item to be removed
-				var index = $(this).closest('.items').index();
-				// Remove the item from the cart
-				removeFromCart(index);
-			});
-		});
-	</script>
+                    // Attach change event handler to quantity input
+                    $('.quantity-input').eq(index).on('change', function() {
+                        // Get the new quantity value
+                        var newQuantity = parseInt($(this).val());
+                        // Update the quantity of the corresponding product in the cart array
+                        cartItems[index].quantity = newQuantity;
+                        // Save the updated cart to local storage
+                        localStorage.setItem('cart', JSON.stringify(cartItems));
+                        // Recalculate subtotal, tax, and total
+                        calculateTotals();
+                    });
+                });
+                $('.background-images').hide(); // Hide empty cart message
+                // Show total section and calculate totals
+                $('.total').show();
+                calculateTotals();
+            }
+
+            // Attach click event handler to the remove buttons
+            $('.checkout-cart').on('click', '.remove-item', function() {
+                // Get the index of the item to be removed
+                var index = $(this).closest('.items').index();
+                // Remove the item from the cart
+                removeFromCart(index);
+            });
+        });
+    </script>
 </body>
+
 </html>
