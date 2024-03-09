@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - Sustainable Haven</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .faq-section {
+            flex: 1;
+            padding: 50px;
+            background-color: #e0f2e9;
+            border-radius: 15px;
+            width: 350px;
+            height: 350px;
+            margin: 30px;
+            text-align: center;
+            display: inline-block;
+            vertical-align: middle;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .faq-section p {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.5;
+            word-wrap: break-word;
+        }
+        
+        .question {
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            flex-direction: column
+        }
+        
+        .answer {
+            display: none;
+        }
+        
+        .answer.visible {
+            display: block;
+        }
+        
+        .question {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+
+            <div class="logo">
+                <a href="home.html">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+            <!-- Business Name and Navigation -->
+            <div class="branding">
+                <h1 class="name">Sustainable Haven</h1>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
+                        <li><a href="faqs.html">FAQs</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Cart -->
+            <div class="cart">
+                <img src="images/cart.jpeg" alt="Cart">
+                </br>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </header>
+    <div class="faq-section">
+
+        <div class="question">
+            <p><strong>How can I return a product?</strong></p>
+            <p class="answer">You can return a product by contacting our customer service within 30 days of purchase.</p>
+        </div>
+    </div>
+
+    <div class="faq-section">
+
+        <div class="question">
+            <p><strong>Do you offer international shipping?</strong></p>
+            <p class="answer">Yes, we offer international shipping to select countries. Please check our shipping policy for more details.</p>
+        </div>
+    </div>
+
+    <div class="faq-section">
+
+        <div class="question">
+            <p><strong>What payment methods do you accept?</strong></p>
+            <p class="answer">We accept major credit cards, PayPal, and Apple Pay.</p>
+        </div>
+    </div>
+
+    <div class="faq-section">
+
+        <div class="question">
+            <p><strong>How long does shipping take?</strong></p>
+            <p class="answer">Shipping usually takes 3-5 business days within the US and 7-14 days internationally.</p>
+        </div>
+    </div>
+
+    <div class="faq-section">
+
+        <div class="question">
+            <p><strong>Can I cancel my order?</strong></p>
+            <p class="answer">You can cancel your order within 24 hours of placing it.</p>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <div class="question">
+            <p><strong>Is there a minimum order requirement?</strong></p>
+            <p class="answer">No, there is no minimum order requirement. You can purchase as little or as much as you need.</p>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <div class="question">
+            <p><strong>Do you offer gift wrapping services?</strong></p>
+            <p class="answer">Yes, we offer gift wrapping services for an additional fee. You can select this option during checkout.</p>
+        </div>
+    </div>
+
+    <div class="faq-section">
+        <div class="question">
+            <p><strong>What is your return policy for damaged items?</strong></p>
+            <p class="answer">If you receive a damaged item, please contact our customer service within 7 days of delivery for a replacement or refund.</p>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const questions = document.querySelectorAll('.question');
+
+            questions.forEach(question => {
+                question.addEventListener('click', function() {
+                    this.querySelector('.answer').classList.toggle('visible');
+                });
+            });
+        });
+    </script>
+    <!-- <script src="scripts.js"></script> -->
+
+
+</body>
+
+</html>
