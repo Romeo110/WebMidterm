@@ -1,114 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sustainable Haven - Eco-Friendly Products</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainable Haven - Eco-Friendly Products</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
+    <!-- Header -->
+    <header>
+        <div class="container">
 
-      <div class="logo">
-        <a href="home.html">
-          <img src="images/logo.png" alt="Logo">
-        </a>
-      </div>
-      <!-- Search Bar -->
-      <div class="search-bar">
-        <input type="text" placeholder="Search...">
-        <button type="submit">Search</button>
-      </div>
-      <!-- Business Name and Navigation -->
-      <div class="branding">
-        <h1 class="name">Sustainable Haven</h1>
-        <nav>
-          <ul class="nav-links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="shop.html">Shop</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contacts.html">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-      <!-- Cart -->
-      <div class="cart">
-        <img src="images/cart.jpeg" alt="Cart">
-      </br>
-        <a href="cart.html">Cart</a>
-      </div>
-    </div>
-  </header>
+            <div class="logo">
+                <a href="home.html">
+                    <img src="images/logo.png" alt="Logo">
+                </a>
+            </div>
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+            <!-- Business Name and Navigation -->
+            <div class="branding">
+                <h1 class="name">Sustainable Haven</h1>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="shop.html">Shop</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacts.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Cart -->
+            <div class="cart">
+                <img src="images/cart.jpeg" alt="Cart">
+                </br>
+                <a href="cart.html">Cart</a>
+            </div>
+        </div>
+    </header>
 
-  <!-- Background Images -->
-  <section class="background-images">
-    <div class="background-text">
-      <h2>Discover sustainability at its finest with Sustainable Haven's eco-conscious products, making shopping for a greener tomorrow a breeze!</h2>
-      <div class="shop-button">
-        <a href="shop.html">Shop Now!</a>
-      </div>
-    </div>
-  </section>
-  
-
-  <!-- Text Section -->
-  <section class="text-section">
-    <h3 class="section-heading">Check out some of our Products!</h3>
-  </section>
-
-  <!-- Images Section -->
-  <section class="image-section">
-    <div class="image-slider">
-      <!-- Images Container -->
-      <div class="image-container"></div>
-    </div>
-    <!-- Navigation Arrows -->
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-  </section>
+    <!-- Background Images -->
+    <section class="background-images">
+        <div class="background-text">
+            <h2>Discover sustainability at its finest with Sustainable Haven's eco-conscious products, making shopping for a greener tomorrow a breeze!</h2>
+            <div class="shop-button">
+                <a href="shop.html">Shop Now!</a>
+            </div>
+        </div>
+    </section>
 
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer">
-      <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
-    </div>
-  </footer>
+    <!-- Text Section -->
+    <section class="text-section">
+        <h3 class="section-heading">Check out some of our Products!</h3>
+    </section>
 
-  <script>
-    const images = [
-      'images/bag.jpg',
-      'images/comb.jpg',
-      'images/detergentSheets.jpg',
-      'images/foodWrap.jpg',
-      'images/fork.jpg',
-      'images/hairbrush.jpg',
-      'images/soap.jpg',
-      'images/spoon.jpeg',
-      'images/straws.jpg',
-      'images/toothbrush.jpg'
-    ];
+    <!-- Images Section -->
+    <section class="image-section">
+        <div class="image-slider">
+            <!-- Images Container -->
+            <div class="image-container"></div>
+        </div>
+        <!-- Navigation Arrows -->
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+    </section>
 
-    const imageContainer = document.querySelector('.image-container');
-    images.forEach(image => {
-      const img = document.createElement('img');
-      img.src = image;
-      img.alt = 'Image';
-      imageContainer.appendChild(img);
-    });
 
-    document.querySelector('.next').addEventListener('click', function() {
-      document.querySelector('.image-slider').scrollLeft += 250; // Adjust scroll distance
-    });
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
+        </div>
+    </footer>
 
-    document.querySelector('.prev').addEventListener('click', function() {
-      document.querySelector('.image-slider').scrollLeft -= 250; // Adjust scroll distance
-    });
-  </script>
+    <script>
+        const images = [
+            'images/bag.jpg',
+            'images/comb.jpg',
+            'images/detergentSheets.jpg',
+            'images/foodWrap.jpg',
+            'images/fork.jpg',
+            'images/hairbrush.jpg',
+            'images/soap.jpg',
+            'images/spoon.jpeg',
+            'images/straws.jpg',
+            'images/toothbrush.jpg'
+        ];
+
+        const imageContainer = document.querySelector('.image-container');
+        images.forEach(image => {
+            const img = document.createElement('img');
+            img.src = image;
+            img.alt = 'Image';
+            imageContainer.appendChild(img);
+        });
+
+        document.querySelector('.next').addEventListener('click', function() {
+            document.querySelector('.image-slider').scrollLeft += 250; // Adjust scroll distance
+        });
+
+        document.querySelector('.prev').addEventListener('click', function() {
+            document.querySelector('.image-slider').scrollLeft -= 250; // Adjust scroll distance
+        });
+    </script>
 </body>
+
 </html>
