@@ -9,12 +9,13 @@
     <style>
         .faq-section {
             flex: 1;
-            padding: 50px;
+            padding: 30px;
             background-color: #e0f2e9;
             border-radius: 15px;
             width: 350px;
-            height: 350px;
+            height: 230px;
             margin: 30px;
+            margin-bottom: 10px;
             text-align: center;
             display: inline-block;
             vertical-align: middle;
@@ -158,14 +159,17 @@
             <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const questions = document.querySelectorAll('.question');
 
-            questions.forEach(question => {
-                question.addEventListener('click', function() {
-                    this.querySelector('.answer').classList.toggle('visible');
-                });
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.question').click(function() {
+                var answer = $(this).find('.answer');
+                if (answer.hasClass('visible')) {
+                    answer.fadeOut().removeClass('visible');
+                } else {
+                    answer.fadeIn().addClass('visible');
+                }
             });
         });
     </script>
