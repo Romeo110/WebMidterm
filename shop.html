@@ -228,9 +228,6 @@
         </div>
     </main>
 
-    <div class="cart-notification"></div>
-    <div class="cart-array"></div>
-
     <!-- Footer -->
     <footer>
         <div class="footer">
@@ -241,7 +238,6 @@
     <script src="jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- <script src="shopScript.js"></script> -->
     <script>
         // Define an array to store product information
         var products = [{
@@ -319,7 +315,6 @@
                 $(button).click(function() {
                     addToCart(products[productIndex]);
                     disableAddToCartButton($(button));
-                    $(".cart-notification").text("Added to cart: " + products[productIndex].name).fadeIn().delay(1000).fadeOut();
                 });
             });
         });
@@ -343,7 +338,6 @@
             cart.push(product);
             // Save the updated cart to localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
-            // $(".cart-array").text(cart.length);
         }
     </script>
 </body>
