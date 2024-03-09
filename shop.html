@@ -15,6 +15,8 @@
         }
         
         .product {
+            width: calc(31% - 20px); /* 33.33% width with some margin */
+            float: left; /* Float left to align products horizontally */
             font-size: 1.2em;
             padding-top: 20px;
             padding-bottom: 20px;
@@ -24,6 +26,7 @@
             margin: 0;
             margin: 0 50px 15px 0;
             padding: 0;
+            box-sizing: border-box; /* Include padding and border in the width calculation */
         }
         
         .pdescription {
@@ -118,44 +121,68 @@
         <!-- Product cards -->
         <div class="product">
             <img src="images/bag.jpg" alt="Bag" width=300px height=auto>
-            <h2>Bag</h2>
-            <p class="pdescription"> Description of Bag </p>
-            <p class="pdescription" style="color:gray;"> $39.99 </p>
+            <h2>Eco-Friendly Canvas Tote Bag</h2>
+            <p class="pdescription"> Our eco-friendly canvas tote bag is made from
+            sustainable materials and designed for everyday use. With its spacious
+            interior and durable construction, it's perfect for carrying groceries,
+            books, and more. Say goodbye to single-use plastic bags and make a positive
+            impact on the environment.</p>
+            <p class="pdescription" style="color:gray;"> $19.99 </p>
             <button class="add-to-cart" data-product-index="0">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/comb.jpg" alt="Comb" width=300px height=auto>
-            <h2>Comb</h2>
-            <p class="pdescription"> Description of Comb </p>
-            <p class="pdescription" style="color:gray;"> $29.99 </p>
+            <h2>Handcrafted Bamboo Hair Comb</h2>
+            <p class="pdescription"> Experience the beauty of nature with our 
+            handcrafted bamboo hair comb. Each comb is carefully carved from sustainably
+            sourced bamboo, making it gentle on your hair and the planet. Say goodbye
+            to plastic combs and hello to a more sustainable grooming routine. </p>
+            <p class="pdescription" style="color:gray;"> $12.99 </p>
             <button class="add-to-cart" data-product-index="1">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/detergentSheets.jpg" alt="Detergent Sheets" width=300px height=auto>
-            <h2>Detergent Sheets</h2>
-            <p class="pdescription"> Description of Detergent Sheets </p>
-            <p class="pdescription" style="color:gray;"> $19.99 </p>
+            <h2>Eco-Friendly Laundry Detergent Sheets</h2>
+            <p class="pdescription"> Our eco-friendly laundry detergent sheets offer
+            a convenient and sustainable alternative to traditional liquid detergents.
+            Made with plant-based ingredients and free from harsh chemicals, these 
+            sheets are gentle on your clothes and the environment. Simply toss one 
+            sheet into the washing machine and enjoy fresh, clean laundry with a clean conscience. </p>
+            <p class="pdescription" style="color:gray;"> $14.99 </p>
             <button class="add-to-cart" data-product-index="2">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/foodWrap.jpg" alt="Food Wrap" width=300px height=auto>
-            <h2>Food Wrap</h2>
-            <p class="pdescription"> Description of Food Wrap </p>
-            <p class="pdescription" style="color:gray;"> $19.99 </p>
+            <h2>Beeswax Food Wraps (9 Packs)</h2>
+            <p class="pdescription"> Say goodbye to plastic cling wrap with our 
+            beeswax food wraps. Made from organic cotton infused with beeswax, 
+            jojoba oil, and tree resin, these wraps are a natural and reusable 
+            alternative for storing food. Wrap sandwiches, cover bowls, or keep 
+            fruits and vegetables fresh without the waste. It's time to make the
+            switch to sustainable food storage solutions. </p>
+            <p class="pdescription" style="color:gray;"> $16.99 </p>
             <button class="add-to-cart" data-product-index="3">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/fork.jpg" alt="Fork" width=300px height=auto>
-            <h2>Fork</h2>
-            <p class="pdescription"> Description of Fork </p>
+            <h2>Reusable Bamboo Fork Set (Pack of 4)</h2>
+            <p class="pdescription"> Upgrade your dining experience with our reusable
+            bamboo fork set. Crafted from sustainable bamboo, these forks are lightweight,
+            durable, and perfect for everyday use. Whether you're enjoying a picnic
+            in the park or a meal at home, these eco-friendly forks are a stylish
+            and sustainable choice for your tableware collection. </p>
             <p class="pdescription" style="color:gray;"> $9.99 </p>
             <button class="add-to-cart" data-product-index="4">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/hairbrush.jpg" alt="Hair Brush" width=300px height=auto>
-            <h2>Hair Brush</h2>
-            <p class="pdescription"> Description of Hair Brush </p>
-            <p class="pdescription" style="color:gray;"> $14.99 </p>
+            <h2>Biodegradable Bamboo Hair Brush</h2>
+            <p class="pdescription"> Treat your hair and the planet with our biodegradable
+            bamboo hair brush. Featuring natural bamboo bristles and a sustainable
+            bamboo handle, this brush gently detangles hair and stimulates the scalp
+            while reducing static and frizz. Say goodbye to plastic hair brushes and
+            hello to a greener way to style. </p>
+            <p class="pdescription" style="color:gray;"> $17.99 </p>
             <button class="add-to-cart" data-product-index="5">Add to Cart</button>
         </div>
     </main>
