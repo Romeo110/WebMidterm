@@ -1,5 +1,4 @@
 /* Reset styles */
-
 * {
     margin: 0;
     padding: 0;
@@ -11,9 +10,7 @@ body {
     background-color: #f4f4f4;
 }
 
-
 /* Header styles */
-
 header {
     background-color: #fff;
     color: #328151;
@@ -29,9 +26,7 @@ header {
     align-items: center;
 }
 
-
 /* Logo styles */
-
 .logo {
     margin-right: 10px;
     /* Add margin to create space between logo and other elements */
@@ -41,31 +36,6 @@ header {
     width: 75px;
     /* Adjust the width of the logo */
     border-radius: 50%;
-}
-
-.search-bar {
-    /* Ensure the search bar is aligned to the left */
-    display: flex;
-    align-items: center;
-    width: 21%;
-    /* Set width to 21% */
-}
-
-.search-bar input[type="text"] {
-    padding: 12px;
-    width: 200px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.search-bar button {
-    padding: 12px 20px;
-    background-color: #328151;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
 }
 
 .branding {
@@ -119,35 +89,31 @@ header {
     margin-right: 5px;
 }
 
-
 /* Cart hover effect */
-
 .cart a:hover {
     color: #ffc107;
     /* Change text color on hover */
 }
 
-
-/* Search button hover effect */
-
-.search-bar button:hover {
-    background-color: #4CAF50;
-    /* Change background color on hover */
-    color: white;
-    /* Change text color on hover */
-}
-
-
 /* Navigation links hover effect */
-
 .nav-links li a:hover {
     color: #ffc107;
     /* Change text color on hover */
 }
 
+/* Active tab styles */
+.nav-links li a.active {
+    background-color: #328151; /* Green background color */
+    color: #fff; /* White text color */
+    padding: 10px 15px; /* Add padding to increase the size of the box */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.nav-links li a.active:hover {
+    color: #ffc107;
+}
 
 /* Footer styles */
-
 footer {
     background-color: #c7ceca;
     color: #fff;
