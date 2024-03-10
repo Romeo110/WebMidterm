@@ -42,6 +42,23 @@
             align-items: center;
             margin: 20px;
         }
+        /* CSS styles for the "Buy Now" button */
+        .buy-now {
+            padding: 15px 30px; /* Add padding to increase button size */
+            border-radius: 25px; /* Add border-radius for rounded edges */
+            background-color: #4CAF50; /* Set background color to green */
+            color: white; /* Set text color to white */
+            font-size: 18px; /* Adjust font size */
+            border: none; /* Remove border */
+            cursor: pointer; /* Add pointer cursor on hover */
+            transition: background-color 0.3s; /* Add transition for smooth color change */
+        }
+
+        /* Hover effect for the "Buy Now" button */
+        .buy-now:hover {
+            background-color: #45a049; /* Darken the background color on hover */
+            color: #ffc107;
+        }
     </style>
 
     <!-- Header -->
@@ -92,11 +109,10 @@
         <h2>Subtotal: $<span class="subtotal">0.00</span></h2>
         <h2>Tax: $<span class="tax">0.00</span></h2>
         <h2>Total: $<span class="total-amount">0.00</span></h2>
+        <button class="buy-now">Buy Now!</button>
     </div>
 
-    <!-- Main Content -->
-    <main class="container">
-    </main>
+    <!-- <button class="buy-now">Buy Now!</button> -->
 
     <!-- Footer -->
     <footer>
@@ -148,6 +164,21 @@
                     $('.total').hide(); // Hide total section
                 }
             }
+
+            // Attach click event handler to the "Buy Now" button
+            $('.buy-now').on('click', function() {
+                // Remove all items from the checkout cart
+                $('.checkout-cart').empty();
+                // Display the "Your items have been purchased" message
+                $('.background-text h2').text('Your Items Have Been Purchased!');
+                // Show the background images
+                $('.background-images').show();
+                // Hide the total section
+                $('.total').hide();
+                // Empty the cartItems array and update local storage
+                cartItems = [];
+                localStorage.setItem('cart', JSON.stringify(cartItems));
+            });
 
             // If cart is empty, display empty cart message
             if (cartItems.length === 0) {
