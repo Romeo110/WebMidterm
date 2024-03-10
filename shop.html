@@ -16,25 +16,35 @@
         
         .product {
             width: calc(31% - 20px); /* 33.33% width with some margin */
-            float: left; /* Float left to align products horizontally */
             font-size: 1.2em;
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-right: 20px;
             position: relative;
             gap: 30px;
-            margin: 0;
             margin: 0 50px 15px 0;
             padding: 0;
             box-sizing: border-box; /* Include padding and border in the width calculation */
+            padding: 20px;
+            background-color: #fff;
+            border: 2px solid #328151; /* Add border with desired color */
+            border-radius: 20px; /* Rounded corners */
+            align-items: center; /* Center children horizontally */
+            text-align: center; /* Center text */
+        }
+
+        /* Center the image */
+        .product img {
+            display: block; /* Ensure image is a block element */
+            margin: 0 auto; /* Center horizontally */
+            max-width: 100%; /* Ensure image fits container */
+            height: auto; /* Maintain aspect ratio */
         }
         
         .pdescription {
-            font-size: 16px;
+            padding-top: 10px;
+            font-size: 18px;
             line-height: 1.5;
             color: #444;
             margin-bottom: 20px;
-            text-align: justify;
+            text-align: center;
         }
         
         .cart-notification {
@@ -76,6 +86,7 @@
             .product {
                 width: calc(100% - 20px);
                 /* Full width with 20px spacing between products for even smaller screens */
+                margin-right: 0; /* Remove right margin */
             }
         }
     </style>
