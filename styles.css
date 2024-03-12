@@ -102,14 +102,21 @@ header {
 }
 
 /* Active tab styles */
-.nav-links li a.active {
+.nav-links li.active {
     background-color: #328151; /* Green background color */
-    color: #fff; /* White text color */
-    padding: 10px 15px; /* Add padding to increase the size of the box */
     border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Add padding to increase the size of the box */
 }
 
-.nav-links li a.active:hover {
+.nav-links li.active a {
+    color: #fff; /* White text color */
+}
+
+.nav-links li.active:hover {
+    background-color: #328151; /* Green background color */
+}
+
+.nav-links li.active:hover a {
     color: #ffc107;
 }
 
