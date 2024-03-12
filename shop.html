@@ -14,28 +14,43 @@
             flex-wrap: wrap;
         }
         
+        body {
+            margin-top: 80px;
+            margin-bottom: 80px;
+        }
+        
         .product {
-            width: calc(31% - 20px); /* 33.33% width with some margin */
+            width: calc(31% - 20px);
+            /* 33.33% width with some margin */
             font-size: 1.2em;
             position: relative;
             gap: 30px;
-            margin: 0 50px 15px 0;
+            margin: 80px 50px 15px 0;
             padding: 0;
-            box-sizing: border-box; /* Include padding and border in the width calculation */
+            box-sizing: border-box;
+            /* Include padding and border in the width calculation */
             padding: 20px;
             background-color: #fff;
-            border: 2px solid #328151; /* Add border with desired color */
-            border-radius: 20px; /* Rounded corners */
-            align-items: center; /* Center children horizontally */
-            text-align: center; /* Center text */
+            border: 2px solid #328151;
+            /* Add border with desired color */
+            border-radius: 20px;
+            /* Rounded corners */
+            align-items: center;
+            /* Center children horizontally */
+            text-align: center;
+            /* Center text */
         }
-
         /* Center the image */
+        
         .product img {
-            display: block; /* Ensure image is a block element */
-            margin: 0 auto; /* Center horizontally */
-            max-width: 100%; /* Ensure image fits container */
-            height: auto; /* Maintain aspect ratio */
+            display: block;
+            /* Ensure image is a block element */
+            margin: 0 auto;
+            /* Center horizontally */
+            max-width: 100%;
+            /* Ensure image fits container */
+            height: auto;
+            /* Maintain aspect ratio */
         }
         
         .pdescription {
@@ -86,7 +101,8 @@
             .product {
                 width: calc(100% - 20px);
                 /* Full width with 20px spacing between products for even smaller screens */
-                margin-right: 0; /* Remove right margin */
+                margin-right: 0;
+                /* Remove right margin */
             }
         }
     </style>
@@ -128,107 +144,80 @@
         <div class="product">
             <img src="images/bag.jpg" alt="Bag" width=300px height=auto>
             <h2>Eco-Friendly Canvas Tote Bag</h2>
-            <p class="pdescription"> Our eco-friendly canvas tote bag is made from
-            sustainable materials and designed for everyday use. With its spacious
-            interior and durable construction, it's perfect for carrying groceries,
-            books, and more. Say goodbye to single-use plastic bags and make a positive
-            impact on the environment.</p>
+            <p class="pdescription"> Our eco-friendly canvas tote bag is made from sustainable materials and designed for everyday use. With its spacious interior and durable construction, it's perfect for carrying groceries, books, and more. Say goodbye to single-use plastic
+                bags and make a positive impact on the environment.</p>
             <p class="pdescription" style="color:#328151;"> $19.99 </p>
             <button class="add-to-cart" data-product-index="0">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/comb.jpg" alt="Comb" width=300px height=auto>
             <h2>Handcrafted Bamboo Hair Comb</h2>
-            <p class="pdescription"> Experience the beauty of nature with our 
-            handcrafted bamboo hair comb. Each comb is carefully carved from sustainably
-            sourced bamboo, making it gentle on your hair and the planet. Say goodbye
-            to plastic combs and hello to a more sustainable grooming routine. </p>
+            <p class="pdescription"> Experience the beauty of nature with our handcrafted bamboo hair comb. Each comb is carefully carved from sustainably sourced bamboo, making it gentle on your hair and the planet. Say goodbye to plastic combs and hello to a more sustainable
+                grooming routine. </p>
             <p class="pdescription" style="color:#328151;"> $12.99 </p>
             <button class="add-to-cart" data-product-index="1">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/detergentSheets.jpg" alt="Detergent Sheets" width=300px height=auto>
             <h2>Eco-Friendly Laundry Detergent Sheets</h2>
-            <p class="pdescription"> Our eco-friendly laundry detergent sheets offer
-            a convenient and sustainable alternative to traditional liquid detergents.
-            Made with plant-based ingredients and free from harsh chemicals, these 
-            sheets are gentle on your clothes and the environment. Simply toss one 
-            sheet into the washing machine and enjoy fresh, clean laundry with a clean conscience. </p>
+            <p class="pdescription"> Our eco-friendly laundry detergent sheets offer a convenient and sustainable alternative to traditional liquid detergents. Made with plant-based ingredients and free from harsh chemicals, these sheets are gentle on your clothes and the environment.
+                Simply toss one sheet into the washing machine and enjoy fresh, clean laundry with a clean conscience. </p>
             <p class="pdescription" style="color:#328151;"> $14.99 </p>
             <button class="add-to-cart" data-product-index="2">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/foodWrap.jpg" alt="Food Wrap" width=300px height=auto>
             <h2>Beeswax Food Wraps (9 Packs)</h2>
-            <p class="pdescription"> Say goodbye to plastic cling wrap with our 
-            beeswax food wraps. Made from organic cotton infused with beeswax, 
-            jojoba oil, and tree resin, these wraps are a natural and reusable 
-            alternative for storing food. Wrap sandwiches, cover bowls, or keep 
-            fruits and vegetables fresh without the waste. It's time to make the
-            switch to sustainable food storage solutions. </p>
+            <p class="pdescription"> Say goodbye to plastic cling wrap with our beeswax food wraps. Made from organic cotton infused with beeswax, jojoba oil, and tree resin, these wraps are a natural and reusable alternative for storing food. Wrap sandwiches, cover bowls, or
+                keep fruits and vegetables fresh without the waste. It's time to make the switch to sustainable food storage solutions. </p>
             <p class="pdescription" style="color:#328151;"> $16.99 </p>
             <button class="add-to-cart" data-product-index="3">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/fork.jpg" alt="Fork" width=300px height=auto>
             <h2>Reusable Bamboo Fork Set (Pack of 4)</h2>
-            <p class="pdescription"> Upgrade your dining experience with our reusable
-            bamboo fork set. Crafted from sustainable bamboo, these forks are lightweight,
-            durable, and perfect for everyday use. Whether you're enjoying a picnic
-            in the park or a meal at home, these eco-friendly forks are a stylish
-            and sustainable choice for your tableware collection. </p>
+            <p class="pdescription"> Upgrade your dining experience with our reusable bamboo fork set. Crafted from sustainable bamboo, these forks are lightweight, durable, and perfect for everyday use. Whether you're enjoying a picnic in the park or a meal at home, these eco-friendly
+                forks are a stylish and sustainable choice for your tableware collection. </p>
             <p class="pdescription" style="color:#328151;"> $9.99 </p>
             <button class="add-to-cart" data-product-index="4">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/hairbrush.jpg" alt="Hair Brush" width=300px height=auto>
             <h2>Biodegradable Bamboo Hair Brush</h2>
-            <p class="pdescription"> Treat your hair and the planet with our biodegradable
-            bamboo hair brush. Featuring natural bamboo bristles and a sustainable
-            bamboo handle, this brush gently detangles hair and stimulates the scalp
-            while reducing static and frizz. Say goodbye to plastic hair brushes and
-            hello to a greener way to style. </p>
+            <p class="pdescription"> Treat your hair and the planet with our biodegradable bamboo hair brush. Featuring natural bamboo bristles and a sustainable bamboo handle, this brush gently detangles hair and stimulates the scalp while reducing static and frizz. Say goodbye
+                to plastic hair brushes and hello to a greener way to style. </p>
             <p class="pdescription" style="color:#328151;"> $17.99 </p>
             <button class="add-to-cart" data-product-index="5">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/soap.jpg" alt="Soap" width=300px height=auto>
             <h2>Sustainable Soap</h2>
-            <p class="pdescription"> Our sustainable soap is handcrafted using 
-            natural ingredients and eco-friendly packaging. Free from harsh chemicals,
-            it gently cleanses your skin while minimizing environmental impact. 
-            Treat yourself to a luxurious bathing experience while supporting sustainability. </p>
+            <p class="pdescription"> Our sustainable soap is handcrafted using natural ingredients and eco-friendly packaging. Free from harsh chemicals, it gently cleanses your skin while minimizing environmental impact. Treat yourself to a luxurious bathing experience while
+                supporting sustainability. </p>
             <p class="pdescription" style="color:#328151;"> $8.99 </p>
             <button class="add-to-cart" data-product-index="6">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/spoon.jpeg" alt="Spoon" width=300px height=auto>
             <h2>Eco-Friendly Bamboo Spoon Set (Pack of 4)</h2>
-            <p class="pdescription"> Embrace sustainable dining with our eco-friendly
-            bamboo spoon. Crafted from renewable bamboo, this spoon is durable, 
-            lightweight, and perfect for stirring, scooping, and serving. Say goodbye
-            to plastic utensils and hello to a greener kitchen. </p>
+            <p class="pdescription"> Embrace sustainable dining with our eco-friendly bamboo spoon. Crafted from renewable bamboo, this spoon is durable, lightweight, and perfect for stirring, scooping, and serving. Say goodbye to plastic utensils and hello to a greener kitchen.
+            </p>
             <p class="pdescription" style="color:#328151;"> $9.99 </p>
             <button class="add-to-cart" data-product-index="7">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/straws.jpg" alt="Straws" width=300px height=auto>
             <h2>Biodegradable Paper Straws (Pack of 50)</h2>
-            <p class="pdescription"> Say goodbye to plastic waste with our biodegradable
-            paper straws. Made from sturdy, eco-friendly paper, these straws are 
-            perfect for parties, events, and everyday use. Join the movement towards
-            a greener future with our compostable paper straws. </p>
+            <p class="pdescription"> Say goodbye to plastic waste with our biodegradable paper straws. Made from sturdy, eco-friendly paper, these straws are perfect for parties, events, and everyday use. Join the movement towards a greener future with our compostable paper straws.
+            </p>
             <p class="pdescription" style="color:#328151;"> $4.99 </p>
             <button class="add-to-cart" data-product-index="8">Add to Cart</button>
         </div>
         <div class="product">
             <img src="images/toothbrush.jpg" alt="Toothbrush" width=300px height=auto>
             <h2>Biodegradable Bamboo Toothbrush (Pack of 4)</h2>
-            <p class="pdescription"> Upgrade your oral care routine with our 
-            biodegradable bamboo toothbrush. Featuring soft, BPA-free bristles 
-            and a compostable bamboo handle, it provides effective cleaning while
-            minimizing environmental impact. Make the switch to sustainable dental
-            hygiene today. </p>
+            <p class="pdescription"> Upgrade your oral care routine with our biodegradable bamboo toothbrush. Featuring soft, BPA-free bristles and a compostable bamboo handle, it provides effective cleaning while minimizing environmental impact. Make the switch to sustainable
+                dental hygiene today. </p>
             <p class="pdescription" style="color:#328151;"> $12.99 </p>
             <button class="add-to-cart" data-product-index="9">Add to Cart</button>
         </div>
@@ -247,66 +236,56 @@
     <script>
         // Define an array to store product information
         var products = [{
-                name: "Eco-Friendly Canvas Tote Bag",
-                image: "images/bag.jpg",
-                quantity: 1,
-                price: 19.99
-            }, 
-            {
-                name: "Handcrafted Bamboo Hair Comb",
-                image: "images/comb.jpg",
-                quantity: 1,
-                price: 12.99
-            },
-            {
-                name: "Eco-Friendly Laundry Detergent Sheets",
-                image: "images/detergentSheets.jpg",
-                quantity: 1,
-                price: 14.99
-            }, 
-            {
-                name: "Beeswax Food Wraps (9 Packs)",
-                image: "images/foodWrap.jpg",
-                quantity: 1,
-                price: 16.99
-            }, 
-            {
-                name: "Reusable Bamboo Fork Set (Pack of 4)",
-                image: "images/fork.jpg",
-                quantity: 1,
-                price: 9.99
-            }, 
-            {
-                name: "Biodegradable Bamboo Hair Brush",
-                image: "images/hairbrush.jpg",
-                quantity: 1,
-                price: 17.99
-            },
-            {
-                name: "Sustainable Soap",
-                image: "images/soap.jpg",
-                quantity: 1,
-                price: 8.99
-            },
-            {
-                name: "Eco-Friendly Bamboo Spoon Set (Pack of 4)",
-                image: "images/spoon.jpeg",
-                quantity: 1,
-                price: 9.99
-            },
-            {
-                name: "Biodegradable Paper Straws (Pack of 50)",
-                image: "images/straws.jpg",
-                quantity: 1,
-                price: 4.99
-            },
-            {
-                name: "Biodegradable Bamboo Toothbrush (Pack of 4)",
-                image: "images/toothbrush.jpg",
-                quantity: 1,
-                price: 12.99
-            },
-        ];
+            name: "Eco-Friendly Canvas Tote Bag",
+            image: "images/bag.jpg",
+            quantity: 1,
+            price: 19.99
+        }, {
+            name: "Handcrafted Bamboo Hair Comb",
+            image: "images/comb.jpg",
+            quantity: 1,
+            price: 12.99
+        }, {
+            name: "Eco-Friendly Laundry Detergent Sheets",
+            image: "images/detergentSheets.jpg",
+            quantity: 1,
+            price: 14.99
+        }, {
+            name: "Beeswax Food Wraps (9 Packs)",
+            image: "images/foodWrap.jpg",
+            quantity: 1,
+            price: 16.99
+        }, {
+            name: "Reusable Bamboo Fork Set (Pack of 4)",
+            image: "images/fork.jpg",
+            quantity: 1,
+            price: 9.99
+        }, {
+            name: "Biodegradable Bamboo Hair Brush",
+            image: "images/hairbrush.jpg",
+            quantity: 1,
+            price: 17.99
+        }, {
+            name: "Sustainable Soap",
+            image: "images/soap.jpg",
+            quantity: 1,
+            price: 8.99
+        }, {
+            name: "Eco-Friendly Bamboo Spoon Set (Pack of 4)",
+            image: "images/spoon.jpeg",
+            quantity: 1,
+            price: 9.99
+        }, {
+            name: "Biodegradable Paper Straws (Pack of 50)",
+            image: "images/straws.jpg",
+            quantity: 1,
+            price: 4.99
+        }, {
+            name: "Biodegradable Bamboo Toothbrush (Pack of 4)",
+            image: "images/toothbrush.jpg",
+            quantity: 1,
+            price: 12.99
+        }, ];
 
         // Initialize the cart from localStorage or create an empty array if it doesn't exist
         var cart = JSON.parse(localStorage.getItem('cart')) || [];
