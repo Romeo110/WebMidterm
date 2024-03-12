@@ -9,8 +9,6 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    margin-top: 80px;
-    /* Adjusted margin to accommodate fixed header */
     margin-bottom: 80px;
     /* Adjusted margin to accommodate fixed footer */
 }
@@ -19,11 +17,6 @@ body {
 /* Header styles */
 
 header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
     background-color: #fff;
     color: #328151;
     padding: 20px 0;
