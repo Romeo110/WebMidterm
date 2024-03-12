@@ -227,18 +227,6 @@
                 }
             });
         });
-    </script>
-    <script>
-        $(document).ready(function() {
-            $('.question').click(function() {
-                var answer = $(this).find('.answer');
-                if (answer.hasClass('visible')) {
-                    answer.fadeOut().removeClass('visible');
-                } else {
-                    answer.fadeIn().addClass('visible');
-                }
-            });
-        });
 
         function filterQuestions(category) {
             $('.faq-section').hide();
