@@ -355,9 +355,48 @@
             newWindow.document.getElementById('jobApplicationForm').addEventListener('submit', function(event) {
                 event.preventDefault();
                 newWindow.alert("Thank you for submitting your application. You will hear from our team in 4-5 days.");
-                newWindow.close();
+
+                // Close the popup window after a slight delay
+                setTimeout(function() {
+                    newWindow.close();
+                }, 100);
             });
         }
+
+        //validation for contact-us form
+        document.addEventListener("DOMContentLoaded", function() {
+            var contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', function(event) {
+                event.preventDefault();
+
+                var firstName = document.getElementById('firstName').value;
+                var lastName = document.getElementById('lastName').value;
+                var email = document.getElementById('email').value;
+                var phone = document.getElementById('phone').value;
+                var userMessage = document.getElementById('userMessage').value;
+
+                if (!firstName || !lastName || !email || !phone || !userMessage) {
+                    alert('Please fill in all required fields.');
+                    return;
+                }
+
+                var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(email)) {
+                    alert('Please enter a valid email address.');
+                    return;
+                }
+
+                // phone number validation
+                var phoneRegex = /^\d{10}$/;
+                if (!phoneRegex.test(phone)) {
+                    alert('Please enter a valid 10-digit phone number.');
+                    return;
+                }
+
+                alert('Form submitted successfully!');
+                contactForm.reset();
+            });
+        });
     </script>
 
 </body>
