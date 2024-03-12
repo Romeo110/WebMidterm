@@ -106,6 +106,7 @@ header {
     background-color: #328151; /* Green background color */
     border-radius: 5px; /* Rounded corners */
     padding: 10px 15px; /* Add padding to increase the size of the box */
+    margin-bottom: 20px;
 }
 
 .nav-links li.active a {
