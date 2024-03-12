@@ -21,19 +21,21 @@
         
         .faq-section {
             flex: 1;
-            padding: 30px;
             border-radius: 15px;
-            margin: 20px;
+            margin: 10px;
             align-items: center;
             text-align: center;
-            margin: 0 auto;
+            margin: 20px;
         }
         
         .faq-section p {
+            margin-top: 5px;
+            margin-bottom: 5px;
             color: #666;
             font-size: 1em;
-            line-height: 1.5;
             word-wrap: break-word;
+            max-width: 30em;
+            overflow-wrap: break-word;
         }
         
         .question {
@@ -57,15 +59,25 @@
             cursor: pointer;
         }
         
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
         .filter-btn {
+            background-color: #6f76ad;
             cursor: pointer;
-            margin: 10px;
-            padding: 8px 16px;
-            border: 2px solid #4CAF50;
+            margin: 7px;
+            padding: 8px 12px;
             border-radius: 5px;
-            background-color: #4CAF50;
             color: white;
-            font-size: 16px;
+            font-size: 12px;
+            display: inline-block;
+        }
+        
+        .filter-btn.active-filter {
+            background-color: #ADA66F;
         }
     </style>
 </head>
@@ -103,15 +115,23 @@
             </div>
         </div>
     </header>
-    <div class="faq-section">
+    <div class="button-container">
+        <div class="filter-btn" onclick="filterQuestions('all')">All</div>
+        <div class="filter-btn" onclick="filterQuestions('general')">General</div>
+        <div class="filter-btn" onclick="filterQuestions('ordering')">Ordering</div>
+        <div class="filter-btn" onclick="filterQuestions('shipping')">Shipping</div>
+        <div class="filter-btn" onclick="filterQuestions('returns')">Returns</div>
+    </div>
 
+
+    <div class="faq-section" data-category="returns">
         <div class="question">
             <p><strong>How can I return a product?</strong></p>
             <p class="answer">You can return a product by contacting our customer service within 30 days of purchase.</p>
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="shipping">
 
         <div class="question">
             <p><strong>Do you offer international shipping?</strong></p>
@@ -119,7 +139,7 @@
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="ordering">
 
         <div class="question">
             <p><strong>What payment methods do you accept?</strong></p>
@@ -127,7 +147,7 @@
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="shipping">
 
         <div class="question">
             <p><strong>How long does shipping take?</strong></p>
@@ -135,7 +155,7 @@
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="ordering">
 
         <div class="question">
             <p><strong>Can I cancel my order?</strong></p>
@@ -143,63 +163,63 @@
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="ordering">
         <div class="question">
             <p><strong>Is there a minimum order requirement?</strong></p>
             <p class="answer">No, there is no minimum order requirement. You can purchase as little or as much as you need.</p>
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="ordering">
         <div class="question">
             <p><strong>Do you offer gift wrapping services?</strong></p>
             <p class="answer">Yes, we offer gift wrapping services for an additional fee. You can select this option during checkout.</p>
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="returns">
         <div class="question">
             <p><strong>What is your return policy for damaged items?</strong></p>
             <p class="answer">If you receive a damaged item, please contact our customer service within 7 days of delivery for a replacement or refund.</p>
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="shipping">
         <div class="question">
             <p><strong>How can I track my order?</strong></p>
             <p class="answer">You will receive a tracking number via email once your order has been shipped. You can use this number to track your order on our website or through the carrier's website.</p>
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="general">
         <div class="question">
             <p><strong>What is your privacy policy?</strong></p>
             <p class="answer">Our privacy policy outlines how we collect, use, and protect your personal information. You can review our privacy policy on the dedicated page available in the footer of our website.</p>
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="general">
         <div class="question">
             <p><strong>Are your products eco-friendly?</strong></p>
             <p class="answer">Yes, we prioritize sustainability and eco-friendliness in our product selection. Check our product descriptions or the "About" page for more details on our commitment to environmental responsibility.</p>
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="ordering shipping">
         <div class="question">
             <p><strong>Can I change my shipping address after placing an order?</strong></p>
             <p class="answer">Unfortunately, we cannot change the shipping address once an order has been placed. Please double-check your information before confirming your purchase.</p>
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="general">
         <div class="question">
             <p><strong>Do you have a loyalty program or rewards program?</strong></p>
             <p class="answer">Yes, we offer a loyalty program where you can earn points for every purchase. These points can be redeemed for discounts on future orders. Learn more about our loyalty program on the "About" or "FAQs" page.</p>
         </div>
     </div>
 
-    <div class="faq-section">
+    <div class="faq-section" data-category="general">
         <div class="question">
             <p><strong>What is your customer service response time?</strong></p>
             <p class="answer">Our customer service team strives to respond to inquiries within 24 hours. If you have urgent concerns, please use our priority contact methods listed on the "Contact" page.</p>
@@ -228,29 +248,55 @@
             });
         });
     </script>
+
     <script>
-        $(document).ready(function() {
-            $('.question').click(function() {
-                var answer = $(this).find('.answer');
-                if (answer.hasClass('visible')) {
-                    answer.fadeOut().removeClass('visible');
-                } else {
-                    answer.fadeIn().addClass('visible');
-                }
-            });
-        });
+        var activeFilter = 'all'; // Initialize the active filter
 
         function filterQuestions(category) {
+            // Reset color for all buttons
+            $('.filter-btn').removeClass('active-filter');
+
+            // Hide all FAQ sections
             $('.faq-section').hide();
 
             if (category === 'all') {
+                // Show all FAQ sections if 'All' is selected
                 $('.faq-section').fadeIn();
             } else {
-                $('.faq-section[data-category="' + category + '"]').fadeIn();
+                // Show only the FAQ sections with the selected category
+                $('.faq-section').each(function() {
+                    var categories = $(this).data('category').split(' ');
+                    if (categories.indexOf(category) !== -1) {
+                        $(this).fadeIn();
+                    }
+                });
             }
+
+            activeFilter = category; // Update the active filter
+
+            // Add active class for the selected button
+            $('.filter-btn').filter(function() {
+                return $(this).text().trim() === category || (category === 'general' && $(this).text().trim() === 'General');
+            }).addClass('active-filter');
+
+            $('.filter-btn').filter(function() {
+                return $(this).text().trim() === category || (category === 'ordering' && $(this).text().trim() === 'Ordering');
+            }).addClass('active-filter');
+
+            $('.filter-btn').filter(function() {
+                return $(this).text().trim() === category || (category === 'shipping' && $(this).text().trim() === 'Shipping');
+            }).addClass('active-filter');
+
+            $('.filter-btn').filter(function() {
+                return $(this).text().trim() === category || (category === 'returns' && $(this).text().trim() === 'Returns');
+            }).addClass('active-filter');
+
+            $('.filter-btn').filter(function() {
+                return $(this).text().trim() === category || (category === 'all' && $(this).text().trim() === 'All');
+            }).addClass('active-filter');
         }
     </script>
-    <!-- <script src="scripts.js"></script> -->
+
 
 
 </body>
