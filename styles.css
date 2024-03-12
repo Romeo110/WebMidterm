@@ -158,6 +158,10 @@ footer {
         flex-basis: 100%;
         /* Full width on smaller screens */
     }
+    .nav-links li.active {
+        padding: 3px 3px;
+        /* Padding to decrease the size of the box */
+    }
 }
 
 .background-images {
