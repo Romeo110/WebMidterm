@@ -48,10 +48,21 @@
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
         
+        .contact-form-section {
+            grid-column: span 2;
+            /* Set the default width to span 2 columns */
+            padding: 5vw;
+            background-color: #e0f2e9;
+            border-radius: 20px;
+            max-width: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
         .hq-section h3,
         .careers-section h3,
         .press-section h3,
-        .blog-section h3 {
+        .blog-section h3,
+        .contact-form-section h3 {
             color: #328151;
             font-size: 1.5em;
             margin-bottom: 10px;
@@ -61,14 +72,16 @@
         .hq-section h3:first-child,
         .careers-section h3:first-child,
         .press-section h3:first-child,
-        .blog-section h3:first-child {
+        .blog-section h3:first-child,
+        .contact-form-section h3:first-child {
             margin-top: 0;
         }
         
         .hq-section p,
         .careers-section p,
         .press-section p,
-        .blog-section p {
+        .blog-section p,
+        .contact-form-section p {
             color: #666;
             font-size: 1em;
             line-height: 1.5;
@@ -98,6 +111,46 @@
         
         .blog-section .explore-link:hover {
             color: #ff8c66;
+        }
+        
+        #contactForm {
+            width: 100%;
+            max-width: none;
+            margin: 20px 0;
+        }
+        
+        #contactForm label {
+            color: #328151;
+            font-weight: bold;
+        }
+        
+        #contactForm input,
+        #contactForm textarea,
+        #contactForm button {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #328151;
+            border-radius: 5px;
+        }
+        
+        #contactForm textarea {
+            resize: vertical;
+        }
+        
+        #contactForm button {
+            width: auto;
+            padding: 8px 15px;
+            margin: 5px 0;
+            border: 1px solid #328151;
+            border-radius: 5px;
+            background-color: #328151;
+            color: white;
+            cursor: pointer;
+        }
+        
+        #contactForm button:hover {
+            background-color: #26633e;
         }
         
         .hero-section h2 {
@@ -199,6 +252,31 @@
             <p>Discover news, tips, and inspiring stories that empower you to live a more eco-conscious lifestyle. From innovative solutions to eco-friendly practices, our blog is your source for staying informed and inspired. Join us in the journey towards
                 a greener future, one blog post at a time. <a href="blog.html" class="explore-link">Start exploring now!</a></p>
         </section>
+
+        <section class="contact-form-section">
+            <h3>Contact Us</h3>
+            <p>Have an urgent question or message for us? Feel free to reach out using the form below.</p>
+
+            <form id="contactForm">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="userMessage">Message:</label>
+                <textarea id="userMessage" name="userMessage" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+
 
     </div>
 
