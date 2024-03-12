@@ -7,13 +7,19 @@
     <title>Contact Us - Sustainable Haven</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        
         .hero-section {
             background-image: url('images/hero.jpg');
             background-size: cover;
             background-position: center;
             text-align: center;
             color: white;
-            padding: 430px 140px 45px;
+            padding: 50vh 5vw 20vh;
             filter: blur(5px);
             text-align: left;
             line-height: 1.5;
@@ -26,19 +32,20 @@
         
         .section-container {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 40px;
-            margin: 90px;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 5vw;
+            padding: 5vw;
         }
         
         .hq-section,
         .careers-section,
         .press-section,
         .blog-section {
-            padding: 50px;
+            padding: 5vw;
             background-color: #e0f2e9;
             border-radius: 20px;
-            max-width: 590px;
+            max-width: 100%;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
         
         .hq-section h3,
@@ -48,6 +55,14 @@
             color: #328151;
             font-size: 1.5em;
             margin-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        .hq-section h3:first-child,
+        .careers-section h3:first-child,
+        .press-section h3:first-child,
+        .blog-section h3:first-child {
+            margin-top: 0;
         }
         
         .hq-section p,
@@ -73,6 +88,34 @@
         
         .apply-now-button:hover {
             background-color: #26633e;
+        }
+        
+        .blog-section .explore-link {
+            color: #0077cc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .blog-section .explore-link:hover {
+            color: #ff8c66;
+        }
+        
+        .hero-section h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -113,7 +156,7 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <h2><strong>We are Here for You</strong></h2>
+        <h2><strong>We are here for you.</strong></h2>
         <p>Our team is ready to help you and answer any questions.</p>
         <p>info@sustainablehaven.com</p>
 
@@ -122,26 +165,41 @@
     <div class="section-container">
         <section class="hq-section">
             <h3>Sustainable Haven HQ</h3>
-            <p>1600 Amphitheatre Parkway<br>Mountain View, CA 94043, USA</p>
+            <p>574 Boston Ave.<br>Medford, MA 02155, USA</p>
             <p>(650) 253-0000</p>
-            <p>See all locations near you.</p>
+            </br>
+            <h3>SH West Coast Branch</h3>
+            <p>456 Eco Drive<br>Sunnyvale, CA 94086</p>
+            <p>(408) 555-1234</p>
+            </br>
+            <h3>SH Texas Branch</h3>
+            <p>789 Green Avenue<br>Austin, TX 78701</p>
+            <p>(512) 555-5678</p>
+
         </section>
 
         <section class="careers-section">
             <h3>Careers at Sustainable Haven</h3>
-            <p>Join our team and be part of something great! At Sustainable Haven, we value innovation, teamwork, and sustainability. Explore our teams and job openings to find the perfect fit for you.</p>
-            <button class="apply-now-button" onclick="openJobApplicationForm()">Apply Now</button>
+            <p>Explore fulfilling career opportunities at Sustainable Haven where innovation, teamwork, and sustainability converge. Join our purpose-driven team and be a part of something extraordinary. Discover exciting job openings that resonate with
+                your passion for making a positive impact. Ready to take the next step? Click "Apply Now" to start your application process.
+            </p>
+            <button id="applyNowButton" class="apply-now-button" onclick="openJobApplicationForm()">Apply Now</button>
+
         </section>
 
         <section class="press-section">
             <h3>Press</h3>
-            <p>If you are a member of the press, email us at press@sustainablehaven.com</p>
+            <p>If you are a member of the press looking to connect, inquire, or collaborate with us, we invite you to reach out to our press team directly via email at press@sustainablehaven.com. We value the role of the media in spreading awareness about
+                sustainability and our initiatives. We are excited about the prospect of working together to share our journey, values, and commitment to sustainability with a broader audience. Thank you for considering Sustainable Haven as a partner
+                in your media endeavors.</p>
         </section>
 
         <section class="blog-section">
             <h3>Visit our Blog</h3>
-            <p>Stay updated with our latest news, tips, and stories on sustainability.</p>
+            <p>Discover news, tips, and inspiring stories that empower you to live a more eco-conscious lifestyle. From innovative solutions to eco-friendly practices, our blog is your source for staying informed and inspired. Join us in the journey towards
+                a greener future, one blog post at a time. <a href="blog.html" class="explore-link">Start exploring now!</a></p>
         </section>
+
     </div>
 
     <!-- Footer -->
@@ -155,13 +213,13 @@
         document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function() {
                 document.querySelector('.hero-section').style.filter = 'blur(0)';
-            }, 750); // Adjust the delay (in milliseconds) as needed
+            }, 750);
         });
 
         document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function() {
                 document.querySelector('.hero-section').style.filter = 'blur(0)';
-            }, 750); // Adjust the delay (in milliseconds) as needed
+            }, 750);
 
             document.getElementById('applyNowButton').addEventListener('click', function() {
                 openJobApplicationForm();
@@ -171,6 +229,9 @@
         function openJobApplicationForm() {
             var formContent = `
         <style>
+            body {
+                font-family: 'Arial', sans-serif;
+            }
             form {
                 padding: 20px;
                 background-color: #e0f2e9;
