@@ -16,7 +16,6 @@
         
         .product {
             width: calc(29% - 10px);
-            /* 33.33% width with some margin */
             font-size: 1.2em;
             position: relative;
             gap: 30px;
@@ -27,25 +26,16 @@
             padding: 20px;
             background-color: #fff;
             border: 2px solid #328151;
-            /* Add border with desired color */
             border-radius: 20px;
-            /* Rounded corners */
             align-items: center;
-            /* Center children horizontally */
             text-align: center;
-            /* Center text */
         }
-        /* Center the image */
         
         .product img {
             display: block;
-            /* Ensure image is a block element */
             margin: 0 auto;
-            /* Center horizontally */
             max-width: 100%;
-            /* Ensure image fits container */
             height: auto;
-            /* Maintain aspect ratio */
         }
         
         .pdescription {
@@ -64,25 +54,22 @@
             margin-bottom: 20px;
             text-align: center;
         }
+
         /* Define hover effect for Add to Cart button */
-        
         .add-to-cart:hover {
             background-color: rgb(9, 154, 9);
             color: white;
         }
+
         /* Override hover effect when button is disabled */
-        
         .add-to-cart:disabled:hover {
             background-color: inherit;
-            /* or specify the original background color */
             color: inherit;
-            /* or specify the original text color */
         }
+
         /* Remove hover effect completely for disabled buttons */
-        
         .add-to-cart:disabled {
             cursor: not-allowed;
-            /* Change cursor style for disabled buttons */
         }
         
         @media screen and (max-width: 768px) {
@@ -97,7 +84,6 @@
                 width: calc(100% - 20px);
                 /* Full width with 20px spacing between products for even smaller screens */
                 margin-right: 0;
-                /* Remove right margin */
             }
         }
     </style>
@@ -314,9 +300,7 @@
 
         // Function to add a product to the cart
         function addToCart(product) {
-            // Implement your cart logic here
             cart.push(product);
-            // Save the updated cart to localStorage
             localStorage.setItem('cart', JSON.stringify(cart));
         }
     </script>
