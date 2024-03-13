@@ -24,11 +24,23 @@
             filter: blur(5px);
             text-align: left;
             line-height: 1.5;
+            text-shadow: 2px 2px 4px rgba(0, 33, 23, 0.5);
+            position: relative;
+        }
+        
+        .hero-section .text-container {
+            background-color: rgba(50, 129, 81, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            position: absolute;
+            bottom: 80px;
+            left: 80px;
+            max-width: 70%;
         }
         
         .hero-section h2 {
             font-size: 2em;
-            margin-bottom: 10px;
+            margin-bottom: 2px;
         }
         
         .section-container {
@@ -51,7 +63,6 @@
         
         .contact-form-section {
             grid-column: span 2;
-            /* Set the default width to span 2 columns */
             padding: 5vw;
             background-color: #e0f2e9;
             border-radius: 20px;
@@ -221,10 +232,11 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <h2><strong>We are here for you.</strong></h2>
-        <p>Our team is ready to help you and answer any questions.</p>
-        <p>info@sustainablehaven.com</p>
-
+        <div class="text-container">
+            <h2><strong>We are here for you.</strong></h2>
+            <p>Our team is ready to help you and answer any questions.</p>
+            <p>info@sustainablehaven.com</p>
+        </div>
     </section>
 
     <div class="section-container">
