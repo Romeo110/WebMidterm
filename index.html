@@ -9,7 +9,6 @@
 </head>
 
 <body>
-
     <header>
         <div class="container">
 
@@ -38,7 +37,6 @@
             </div>
         </div>
     </header>
-
     <section class="background-images">
         <div class="background-text">
             <h2>Discover sustainability at its finest with Sustainable Haven's eco-conscious products, making shopping for a greener tomorrow a breeze!</h2>
@@ -47,8 +45,6 @@
             </div>
         </div>
     </section>
-
-
     <section class="text-section">
         <h3 class="section-heading">Check out some of our Products!</h3>
     </section>
@@ -60,18 +56,14 @@
         <button class="prev">&#10094;</button>
         <button class="next">&#10095;</button>
     </section>
-
-
     <footer>
         <div class="footer">
             <p>&copy; 2024 Sustainable Haven. All rights reserved.</p>
         </div>
     </footer>
-
     <script>
         var cart = [];
         localStorage.setItem('cart', JSON.stringify(cart));
-
         const images = [
             'images/bag.jpg',
             'images/comb.jpg',
@@ -82,7 +74,6 @@
             'images/soap.jpg',
             'images/toothbrush.jpg'
         ];
-
         const imageContainer = document.querySelector('.image-container');
         images.forEach(image => {
             const img = document.createElement('img');
@@ -90,16 +81,13 @@
             img.alt = 'Image';
             imageContainer.appendChild(img);
         });
-
         document.querySelector('.next').addEventListener('click', function() {
             document.querySelector('.image-slider').scrollLeft += 250; // Adjust scroll distance
         });
-
         document.querySelector('.prev').addEventListener('click', function() {
             document.querySelector('.image-slider').scrollLeft -= 250; // Adjust scroll distance
         });
     </script>
     <script src="scripts.js"></script>
 </body>
-
 </html>
