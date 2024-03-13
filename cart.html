@@ -47,31 +47,22 @@
             background-color: rgb(251, 5, 5);
             color: white;
         }
+
         /* CSS styles for the "Buy Now" button */
-        
         .buy-now {
             padding: 15px 30px;
-            /* Add padding to increase button size */
             border-radius: 25px;
-            /* Add border-radius for rounded edges */
             background-color: #4CAF50;
-            /* Set background color to green */
-            color: white;
-            /* Set text color to white */
+            color: rgb(255, 255, 255);
             font-size: 18px;
-            /* Adjust font size */
             border: none;
-            /* Remove border */
             cursor: pointer;
-            /* Add pointer cursor on hover */
             transition: background-color 0.3s;
-            /* Add transition for smooth color change */
         }
+
         /* Hover effect for the "Buy Now" button */
-        
         .buy-now:hover {
             background-color: #45a049;
-            /* Darken the background color on hover */
             color: #ffc107;
         }
     </style>
@@ -127,8 +118,6 @@
         <button class="buy-now">Buy Now!</button>
     </div>
 
-    <!-- <button class="buy-now">Buy Now!</button> -->
-
     <!-- Footer -->
     <footer>
         <div class="footer">
@@ -139,7 +128,6 @@
     <script src="jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <!-- <script src="shopScript.js"></script> -->
     <script>
         $(document).ready(function() {
             // Retrieve cart items from local storage
@@ -148,16 +136,12 @@
             // Function to calculate subtotal, tax, and total
             function calculateTotals() {
                 var subtotal = 0;
-                var taxRate = 0.0625; // Assuming a 6.25% tax rate, you can adjust this as needed
-                // Calculate subtotal
+                var taxRate = 0.0625; // Assuming a 6.25% tax rate
                 cartItems.forEach(function(item) {
                     subtotal += item.price * item.quantity;
                 });
-                // Calculate tax
                 var tax = subtotal * taxRate;
-                // Calculate total with tax
                 var total = subtotal + tax;
-                // Update the HTML with the calculated values
                 $('.subtotal').text(subtotal.toFixed(2));
                 $('.tax').text(tax.toFixed(2));
                 $('.total-amount').text(total.toFixed(2));
@@ -165,15 +149,10 @@
 
             // Function to remove an item from the cart
             function removeFromCart(index) {
-                // Remove the item from the cart array
                 cartItems.splice(index, 1);
-                // Save the updated cart to local storage
                 localStorage.setItem('cart', JSON.stringify(cartItems));
-                // Remove the corresponding item HTML from the checkout cart
                 $('.checkout-cart .items').eq(index).remove();
-                // Recalculate subtotal, tax, and total
                 calculateTotals();
-                // Check if the cart is empty after removal
                 if (cartItems.length === 0) {
                     $('.background-images').show(); // Show empty cart message
                     $('.total').hide(); // Hide total section
@@ -182,23 +161,18 @@
 
             // Attach click event handler to the "Buy Now" button
             $('.buy-now').on('click', function() {
-                // Remove all items from the checkout cart
                 $('.checkout-cart').empty();
-                // Display the "Your items have been purchased" message
                 $('.background-text h2').text('Your Items Have Been Purchased!');
-                // Show the background images
                 $('.background-images').show();
-                // Hide the total section
                 $('.total').hide();
-                // Empty the cartItems array and update local storage
                 cartItems = [];
                 localStorage.setItem('cart', JSON.stringify(cartItems));
             });
 
             // If cart is empty, display empty cart message
             if (cartItems.length === 0) {
-                $('.background-images').show(); // Show empty cart message
-                $('.total').hide(); // Hide total section
+                $('.background-images').show(); 
+                $('.total').hide(); 
             } else {
                 // Iterate over cart items and generate HTML for each item
                 cartItems.forEach(function(item, index) {
@@ -213,18 +187,13 @@
 							</div>
 						</div>
 					`;
-                    // Append the item HTML to the checkout-cart div
                     $('.checkout-cart').append(itemHTML);
 
                     // Attach change event handler to quantity input
                     $('.quantity-input').eq(index).on('change', function() {
-                        // Get the new quantity value
                         var newQuantity = parseInt($(this).val());
-                        // Update the quantity of the corresponding product in the cart array
                         cartItems[index].quantity = newQuantity;
-                        // Save the updated cart to local storage
                         localStorage.setItem('cart', JSON.stringify(cartItems));
-                        // Recalculate subtotal, tax, and total
                         calculateTotals();
                     });
                 });
@@ -236,9 +205,7 @@
 
             // Attach click event handler to the remove buttons
             $('.checkout-cart').on('click', '.remove-item', function() {
-                // Get the index of the item to be removed
                 var index = $(this).closest('.items').index();
-                // Remove the item from the cart
                 removeFromCart(index);
             });
         });
